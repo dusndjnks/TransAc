@@ -33,7 +33,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <section className="testimonial-area py-28 bg-[#f5f7fa]" id="testimonial">
+    <section className="testimonial-area py-16 md:py-20 lg:py-28 bg-[#f5f7fa]" id="testimonial">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

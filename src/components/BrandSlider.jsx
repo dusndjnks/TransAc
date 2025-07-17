@@ -14,7 +14,7 @@ const brands = [
 
 const BrandSlider = () => {
   return (
-    <section className="md:py-20 bg-white">
+    <section className="md:py-20 py-12  bg-white">
       <div className="max-w-screen-xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
           Brands We Work With
