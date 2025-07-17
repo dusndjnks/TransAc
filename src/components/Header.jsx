@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FaFacebook, FaTwitter, FaDribbble, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaDribbble } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,14 +8,13 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 30);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -25,34 +24,32 @@ const Header = () => {
         isScrolled ? 'backdrop-blur-md bg-black/30' : 'bg-transparent'
       }`}
     >
-          {/* Top Header */}
-            <div className="bg-transparent text-sm py-2">
-              <div className="max-w-screen-xl mx-auto px-4 pb-3 border-b border-white/20">
-                <div className="flex flex-wrap items-center justify-between md:justify-start md:gap-6">
-                  {/* Phone */}
-                  <div className="text-gray-300">
-                    <a href="tel:+9530123654896" className="hover:underline">+953 012 3654 896</a>
-                  </div>
-
-                  {/* Email - right on small, next to phone on md+ */}
-                  <div className="text-gray-300 md:ml-4 ml-auto">
-                    <a href="mailto:transac@gmail.com" className="hover:underline">transac@gmail.com</a>
-                  </div>
-
-                  {/* Social icons - hidden on small */}
-                  <div className="hidden md:flex gap-4 text-gray-300 ml-auto">
-                    <a href="#"><FaFacebook className="hover:text-green-500" /></a>
-                    <a href="#"><FaTwitter className="hover:text-green-500" /></a>
-                    <a href="#"><FaInstagram className="hover:text-green-500" /></a>
-                    <a href="#"><FaDribbble className="hover:text-green-500" /></a>
-                  </div>
-                </div>
-              </div>
+      {/* Top Header */}
+      <div className="bg-transparent text-sm py-2">
+        <div className="max-w-screen-xl mx-auto px-4 pb-3 border-b border-white/20">
+          <div className="flex flex-wrap items-center justify-between md:justify-start md:gap-6">
+            {/* Phone */}
+            <div className="text-gray-300">
+              <a href="tel:+9530123654896" className="hover:underline">+953 012 3654 896</a>
             </div>
 
+            {/* Email */}
+            <div className="text-gray-300 md:ml-4 ml-auto">
+              <a href="mailto:transac@gmail.com" className="hover:underline">transac@gmail.com</a>
+            </div>
 
+            {/* Social Icons */}
+            <div className="hidden md:flex gap-4 text-gray-300 ml-auto">
+              <a href="#"><FaFacebook className="hover:text-green-500" /></a>
+              <a href="#"><FaTwitter className="hover:text-green-500" /></a>
+              <a href="#"><FaInstagram className="hover:text-green-500" /></a>
+              <a href="#"><FaDribbble className="hover:text-green-500" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Main Navigation */}
+      {/* Overlay for Mobile */}
       {isMenuOpen && (
         <div
           onClick={toggleMenu}
@@ -60,9 +57,10 @@ const Header = () => {
         ></div>
       )}
 
+      {/* Main Navigation */}
       <div className="relative z-50">
-        <div className="max-w-screen-xl mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-screen-xl mx-auto px-4 lg:px-12">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div id="logo" className="flex items-center gap-3">
               <a href="/" className="flex items-center gap-3">
@@ -70,7 +68,7 @@ const Header = () => {
                   src="https://pngimg.com/d/meta_PNG5.png"
                   alt="Logo"
                   title="Logo"
-                  className="h-10"
+                  className="h-9"
                 />
                 <span className="text-xl font-semibold text-white">Trans India Cooling</span>
               </a>
