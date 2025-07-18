@@ -5,6 +5,10 @@ import GallerySection from "../components/GallerySection"
 import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
+import gal1 from "../assets/IMG-20250714-WA0021.jpg"
+import gal2 from "../assets/IMG-20250714-WA0028.jpg"
+import gal3 from "../assets/IMG-20250714-WA0029.jpg" 
+import gal4 from "../assets/IMG-20250714-WA0030.jpg"
 
 
 
@@ -15,7 +19,7 @@ const Home = () => {
          <section
         id="home"
         className="relative bg-cover bg-center bg-no-repeat h-[90vh] lg:h-screen flex items-center justify-center pt-[130px]"
-        style={{ backgroundImage: `url(${home1})` }}
+        style={{ backgroundImage: `url(${gal4})` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
