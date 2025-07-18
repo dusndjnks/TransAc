@@ -2,12 +2,17 @@ import { NavLink } from "react-router-dom"
 import BrandSlider from "../components/BrandSlider"
 import TestimonialSlider from "../components/Testimonials"
 import GallerySection from "../components/GallerySection"
+import home1 from "../assets/hero.jpg";
 
 
 const Home = () => {
   return (
     <div>
-      <section id="home" className="relative bg-cover bg-center bg-no-repeat h-[90vh] lg:h-screen flex items-center justify-center pt-[130px]" style={{ backgroundImage: `url("https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg")` }}>
+         <section
+        id="home"
+        className="relative bg-cover bg-center bg-no-repeat h-[90vh] lg:h-screen flex items-center justify-center pt-[130px]"
+        style={{ backgroundImage: `url(${home1})` }}
+      >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
