@@ -3,6 +3,10 @@ import BrandSlider from "../components/BrandSlider"
 import TestimonialSlider from "../components/Testimonials"
 import GallerySection from "../components/GallerySection"
 import home1 from "../assets/hero.jpg";
+import home2 from "../assets/hero2.jpg"
+import home3 from "../assets/hero3.jpg";
+
+
 
 
 const Home = () => {
@@ -32,7 +36,7 @@ const Home = () => {
         </div>
       </section>
 
-        <section id="about" className="py-16 md:py-24 bg-gray-100">
+        <section id="about" className="py-16 md:py-24 ">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="flex flex-col md:flex-row items-center gap-12">
 
@@ -92,6 +96,64 @@ const Home = () => {
       <BrandSlider/>
 
       <GallerySection/>
+      
+      <section
+  className="relative bg-fixed bg-center bg-cover min-h-screen flex items-center justify-center"
+  style={{
+    backgroundImage: `url(${home1})`,
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
+
+  {/* Content */}
+  <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 py-16 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+      Our Showrooms
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+      {/* Showroom 1 */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src={home2}
+          alt="Perumbavoor Showroom"
+          className="w-full h-52 object-cover"
+        />
+        <div className="px-4 py-3 text-center font-medium text-gray-800">
+          Trans India AC, Perumbavoor
+        </div>
+      </div>
+
+      {/* Showroom 2 */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src={home1}
+          alt="Kothamangalam Showroom"
+          className="w-full h-52 object-cover"
+        />
+        <div className="px-4 py-3 text-center font-medium text-gray-800">
+          Trans India AC, Kothamangalam
+        </div>
+      </div>
+
+      {/* Showroom 3 */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+        <img
+          src={home3}
+          alt="Thankalam Showroom"
+          className="w-full h-52 object-cover"
+        />
+        <div className="px-4 py-3 text-center font-medium text-gray-800">
+          Trans India AC, Thankalam
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
       <TestimonialSlider/>
 

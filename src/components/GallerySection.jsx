@@ -7,7 +7,7 @@ import gal4 from "../assets/IMG-20250714-WA0030.jpg"
 const GallerySection = () => {
   return (
 <section className="gallery-area pb-28 bg-gray-100 py-8 md:py-16">
-  <div className="px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48 2xl:px-56">
+  <div className="px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48 2xl:px-">
     {/* Header */}
     <div className="flex justify-center">
       <div className="text-center max-w-2xl pb-10">
@@ -30,7 +30,7 @@ const GallerySection = () => {
         alt="Lavender ambient interior"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition duration-300" />
+      <div className="absolute inset-0  group-hover:bg-black/30 transition duration-300" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
         <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
           Lavender ambient interior
@@ -48,11 +48,11 @@ const GallerySection = () => {
   <div className="col-span-12 lg:col-span-4">
     <div className="relative group overflow-hidden rounded-2xl shadow lg:h-[400px] h-[300px]">
       <img
-        src={gal2}
+        src={gal1}
         alt="Ambient interior"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition duration-300" />
+      <div className="absolute inset-0  group-hover:bg-black/30 transition duration-300" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
         <h3 className="text-xl font-semibold text-white mb-4">Ambient interior</h3>
         <NavLink
@@ -69,11 +69,11 @@ const GallerySection = () => {
   <div className="col-span-12 lg:col-span-4 mt-6">
     <div className="relative group overflow-hidden rounded-2xl shadow lg:h-[400px] h-[300px]">
       <img
-        src={gal1}
+        src={gal2}
         alt="Cooling Systems Interior"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition duration-300" />
+      <div className="absolute inset-0  group-hover:bg-black/30 transition duration-300" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
         <h3 className="text-xl font-semibold text-white mb-4">Cooling Systems Interior</h3>
         <NavLink
@@ -93,7 +93,7 @@ const GallerySection = () => {
         alt="Modern Lobby Design"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition duration-300" />
+      <div className="absolute inset-0  group-hover:bg-black/30 transition duration-300" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
         <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
           Modern Lobby Design

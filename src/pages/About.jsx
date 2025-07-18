@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div>
 
-         <div>
+    <div>
       {/* About Header */}
      <section
           role="banner"
