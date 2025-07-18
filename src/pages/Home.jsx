@@ -16,9 +16,9 @@ import gal4 from "../assets/IMG-20250714-WA0030.jpg"
 const Home = () => {
   return (
     <div>
-         <section
+      <section
         id="home"
-        className="relative bg-cover bg-center bg-no-repeat h-[90vh] lg:h-screen flex items-center justify-center pt-[130px]"
+        className="relative bg-cover bg-center bg-no-repeat h-[80vh] lg:h-screen flex items-center justify-center pt-[130px]"
         style={{ backgroundImage: `url(${gal4})` }}
       >
         {/* Overlay */}
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </section>
 
-        <section id="about" className="py-16 md:py-24 ">
+      <section id="about" className="py-16 md:py-24 ">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="flex flex-col md:flex-row items-center gap-12">
 
@@ -95,70 +95,64 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+      </section>
 
       <BrandSlider/>
 
       <GallerySection/>
 
-      <section
-  className="relative bg-fixed bg-center bg-cover min-h-screen lg:h-[80vh] flex items-center"
-  style={{
-    backgroundImage: `url(${home1})`,
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60" />
-
-  {/* Content */}
-  <div className="relative z-10 w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div className="text-center mb-10">
-      <h2 className="text-3xl md:text-4xl font-bold text-white">
-        Our Showrooms
-      </h2>
-    </div>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {/* Showroom 1 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img
-          src={home2}
-          alt="Perumbavoor Showroom"
-          className="w-full h-52 object-cover"
-        />
-        <div className="px-4 py-3 text-center font-medium text-gray-800">
-          Trans India AC, Perumbavoor
+      <section className="relative min-h-[60vh] bg-gray-900 flex items-center">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={home1}
+            alt="Trans India AC Showrooms"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
-      </div>
 
-      {/* Showroom 2 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img
-          src={home1}
-          alt="Kothamangalam Showroom"
-          className="w-full h-52 object-cover"
-        />
-        <div className="px-4 py-3 text-center font-medium text-gray-800">
-          Trans India AC, Kothamangalam
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Showrooms
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Visit our premium showrooms to experience our cooling solutions firsthand
+            </p>
+          </div>
+
+          {/* Showroom Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { img: home2, location: "Perumbavoor" },
+              { img: home1, location: "Kothamangalam" },
+              { img: home3, location: "Thankalam" }
+            ].map((showroom, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src={showroom.img}
+                  alt={`${showroom.location} Showroom`}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-4 text-center">
+                  <h3 className="font-semibold text-lg text-gray-800">
+                    Trans India AC, {showroom.location}
+                  </h3>
+                  <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
+                    View Location
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Showroom 3 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img
-          src={home3}
-          alt="Thankalam Showroom"
-          className="w-full h-52 object-cover"
-        />
-        <div className="px-4 py-3 text-center font-medium text-gray-800">
-          Trans India AC, Thankalam
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       <TestimonialSlider/>
 
