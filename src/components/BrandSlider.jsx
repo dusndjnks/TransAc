@@ -16,9 +16,6 @@ const BrandSlider = () => {
   return (
     <section className="md:py-20 py-12  bg-white">
       <div className="max-w-screen-xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-          Brands We Work With
-        </h2>
 
         <Swiper
           modules={[Autoplay]}
@@ -30,7 +27,7 @@ const BrandSlider = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={40}
           breakpoints={{
             640: { slidesPerView: 3 },
@@ -45,7 +42,7 @@ const BrandSlider = () => {
                 <img
                   src={logo}
                   alt={`Brand ${index + 1}`}
-                  className="h-20 object-contain"
+                  className="md:h-20 h-12 object-contain"
                 />
               </div>
             </SwiperSlide>

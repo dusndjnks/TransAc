@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom"
 import BrandSlider from "../components/BrandSlider"
 import TestimonialSlider from "../components/Testimonials"
+import GallerySection from "../components/GallerySection"
 
 
 const Home = () => {
   return (
     <div>
-      <section id="home" className="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center pt-[130px]" style={{ backgroundImage: `url("https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg")` }}>
+      <section id="home" className="relative bg-cover bg-center bg-no-repeat h-[90vh] lg:h-screen flex items-center justify-center pt-[130px]" style={{ backgroundImage: `url("https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg")` }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
@@ -50,11 +51,9 @@ const Home = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                   About Our Company
                 </h2>
-
                 <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
-                  <span className="font-semibold text-green-600">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-green-600">Perumbavoor</span>, <span className="text-green-600">Kothamangalam</span>, and <span className="text-green-600">Thankalam</span>, we specialize in top-tier brands including <span className="text-green-600">Mitsubishi</span>, <span className="text-green-600">Toshiba</span>, <span className="text-green-600">General</span>, <span className="text-green-600">Daikin</span>, and <span className="text-green-600">Panasonic</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your specific needs.
+                  <span className="font-semibold text-green-600">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-green-600">Perumbavoor</span>, <span className="text-green-600">Kothamangalam</span>, and <span className="text-green-600">Thankalam</span>, we specialize in top-tier brands including <span className="text-green-600">Mitsubishi</span>, <span className="text-green-600">Toshiba</span>, <span className="text-green-600">General</span>, <span className="text-green-600">Daikin</span>, and <span className="text-green-600">Panasonic</span>. We also specialize in centralized systems such as <span className="text-green-600">VRF</span>, <span className="text-green-600">VRV</span>, <span className="text-green-600">ductable units</span>, <span className="text-green-600">package units</span>, and <span className="text-green-600">AHUs</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your specific needs.
                 </p>
-
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <div className="bg-green-100 p-2 rounded-full mr-4">
@@ -64,7 +63,6 @@ const Home = () => {
                     </div>
                     <span className="text-gray-700">40+ years of trusted service</span>
                   </div>
-
                   <div className="flex items-center">
                     <div className="bg-green-100 p-2 rounded-full mr-4">
                       <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,9 +84,11 @@ const Home = () => {
           </div>
         </section>
 
-       <BrandSlider/>
-      
-    <TestimonialSlider/>
+      <BrandSlider/>
+
+      <GallerySection/>
+
+      <TestimonialSlider/>
 
 
 </div>
