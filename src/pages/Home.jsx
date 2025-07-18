@@ -96,9 +96,9 @@ const Home = () => {
       <BrandSlider/>
 
       <GallerySection/>
-      
+
       <section
-  className="relative bg-fixed bg-center bg-cover min-h-screen flex items-center justify-center"
+  className="relative bg-fixed bg-center bg-cover min-h-screen lg:h-[80vh] flex items-center"
   style={{
     backgroundImage: `url(${home1})`,
   }}
@@ -107,14 +107,16 @@ const Home = () => {
   <div className="absolute inset-0 bg-black/60" />
 
   {/* Content */}
-  <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 py-16 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
-      Our Showrooms
-    </h2>
+  <div className="relative z-10 w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-white">
+        Our Showrooms
+      </h2>
+    </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {/* Showroom 1 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
         <img
           src={home2}
           alt="Perumbavoor Showroom"
@@ -126,7 +128,7 @@ const Home = () => {
       </div>
 
       {/* Showroom 2 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
         <img
           src={home1}
           alt="Kothamangalam Showroom"
@@ -138,7 +140,7 @@ const Home = () => {
       </div>
 
       {/* Showroom 3 */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
         <img
           src={home3}
           alt="Thankalam Showroom"
@@ -151,7 +153,6 @@ const Home = () => {
     </div>
   </div>
 </section>
-
 
 
 

@@ -15,28 +15,43 @@ const About = () => {
 
     <div>
       {/* About Header */}
-     <section
-          role="banner"
-          aria-label="About Us page header"
-          className="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center text-center"
-          style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")',
-          }}
-        >
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gray-900/60" aria-hidden="true"></div>
-        
-          {/* Centered Content */}
-          <div className="relative z-10 max-w-3xl mx-auto px-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white">
-              About Our Company
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-300">
-              We're dedicated to delivering exceptional solutions with transparency and innovation at our core.
-            </p>
-          </div>
-        </section>
+   <section
+  role="banner"
+  aria-label="About Us page header"
+  className="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center text-center"
+  style={{
+    backgroundImage: 'url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")',
+    backgroundAttachment: 'fixed' // Adds parallax effect
+  }}
+>
+  {/* Gradient overlay (more modern than solid color) */}
+  <div 
+    className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-transparent" 
+    aria-hidden="true"
+  ></div>
+  
+  {/* Performance optimized background (optional) */}
+  <div className="absolute inset-0 bg-gray-900/30 backdrop-blur-sm" aria-hidden="true"></div>
+
+  {/* Centered Content with animation */}
+  <div className="relative z-10 max-w-4xl mx-auto px-6 transform transition-all duration-500">
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+      <span className="inline-block transform transition-all duration-700 hover:scale-105">
+        About Our Company
+      </span>
+    </h1>
+    
+    <div className="relative">
+      <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto opacity-90 leading-relaxed">
+        We're dedicated to delivering exceptional solutions with transparency and innovation at our core.
+      </p>
+      
+      {/* Decorative elements */}
+      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-green-500 rounded-full"></div>
+    </div>
+
+  </div>
+</section>
 
       {/* Intro Section */}
       <div

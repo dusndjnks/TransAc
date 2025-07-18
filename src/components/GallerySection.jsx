@@ -6,7 +6,7 @@ import gal4 from "../assets/IMG-20250714-WA0030.jpg"
 
 const GallerySection = () => {
   return (
-<section className="gallery-area pb-28 bg-gray-100 py-8 md:py-16">
+<section className="gallery-area pb-28  py-8 md:py-16">
   <div className="px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48 2xl:px-">
     {/* Header */}
     <div className="flex justify-center">
