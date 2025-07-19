@@ -4,8 +4,9 @@ import {
   FaPhone,
   FaEnvelope,
   FaFacebook,
-  FaTwitter,
+  FaWhatsapp,
   FaInstagram,
+  FaLinkedin
 } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -35,8 +36,8 @@ const Header = () => {
 
   const socialLinks = [
     { icon: <FaFacebook />, url: "#" },
-    { icon: <FaTwitter />, url: "#" },
-    { icon: <FaInstagram />, url: "#" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/transindia-cooling-solutions-a1b442345/?originalSubdomain=in" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/trans_india_cooling_solution?igsh=MTQ4bWN4Mjg5b3draA==" },
   ];
 
   return (
@@ -51,18 +52,18 @@ const Header = () => {
           <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div className="flex space-x-6">
               <a
-                href="tel:+9530123654896"
+                href="tel:+7558801625"
                 className="flex items-center text-sm text-white font-sans"
               >
                 <FaPhone className="mr-2" />
-                +953 012 3654 896
+                +91 7558801625
               </a>
               <a
-                href="mailto:transac@gmail.com"
+                href="mailto:transindiacooling@gmail.com"
                 className="flex items-center text-sm text-white font-sans"
               >
                 <FaEnvelope className="mr-2" />
-                transac@gmail.com
+                transindiacooling@gmail.com
               </a>
             </div>
             <div className="flex space-x-4">
@@ -80,21 +81,25 @@ const Header = () => {
         </div>
       )}
 
-      {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto pr-4 ">
-        <div className="flex justify-between items-center h-16 ">
-          {/* Logo */}
-        <NavLink to="/" className="flex items-center ">
-          <img src={logo} alt="Trans India Cooling Logo" className="h-14" />
-          <span
-            className={`text-xl font-semibold ${
-              isScrolled ? "text-gray-900" : "text-white"
-            }`}
-          >
-            TRANS INDIA
-          </span>
-        </NavLink>
+      {/* HR between top header and nav */}
+      {!isScrolled && (
+        <hr className="border-t border-white/30 md:block hidden max-w-7xl mx-auto px-4   " />
+      )}
 
+      {/* Main Navigation */}
+      <div className="max-w-7xl mx-auto pr-4">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <NavLink to="/" className="flex items-center">
+            <img src={logo} alt="Trans India Cooling Logo" className="h-14" />
+            <span
+              className={`text-xl font-semibold ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }`}
+            >
+              TRANS INDIA
+            </span>
+          </NavLink>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 font-sans">
@@ -157,18 +162,18 @@ const Header = () => {
             {/* Contact in mobile menu */}
             <div className="pt-4 border-t border-gray-100 mt-2">
               <a
-                href="tel:+9530123654896"
+                href="tel:+91 7558801625"
                 className="flex items-center px-3 py-3 text-gray-700"
               >
                 <FaPhone className="mr-3" />
-                +953 012 3654 896
+                +91 7558801625
               </a>
               <a
-                href="mailto:transac@gmail.com"
+                href="mailto:transindiacooling@gmail.com"
                 className="flex items-center px-3 py-3 text-gray-700"
               >
                 <FaEnvelope className="mr-3" />
-                transac@gmail.com
+                transindiacooling@gmail.com
               </a>
               <div className="flex space-x-4 px-3 py-3">
                 {socialLinks.map((social, index) => (

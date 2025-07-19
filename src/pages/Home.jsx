@@ -6,30 +6,39 @@ import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
 import ProductBrands from "../components/ProductBrands";
+import Hero from "../assets/hero.mp4";
 
 const Home = () => {
   return (
-    <div className="font-sans text-gray-800">
-      {/* Hero Section */}
+    <div className="font-sans text-gray-800"> 
+
+      {/* Header Section */}
      <section
   id="home"
-  className="relative bg-cover bg-left-top md:bg-center-top bg-no-repeat flex items-center justify-center pt-[130px] pb-16"
-  style={{ backgroundImage: `url("https://images.pexels.com/photos/8089081/pexels-photo-8089081.jpeg")` }}
+  className="relative w-full h-[65vh] lg:h-screen overflow-hidden"
 >
-  <div className="absolute inset-0 bg-bg-dark bg-opacity-60 z-0"></div>
+  {/* Background Video */}
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    src={Hero}
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
-  <div className="relative z-10 max-w-8xl mx-auto px-6">
-    <div className="text-center">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6 text-primary">
-        Efficient Cooling Solutions <br className="hidden sm:block" />
-        for Every Home & Office
-      </h1>
-      <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-        Top-notch AC installation, repair & maintenance. Fast, reliable & energy-efficient.
-      </p>
-    </div>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-bg-dark bg-opacity-60 z-0" />
+
+  {/* Content */}
+  <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
+    <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6 text-white">
+      Efficient Cooling Solutions <br className="hidden sm:block" />
+      for Every Home & Office
+    </h1>
   </div>
 </section>
+
 
 
       {/* About Section */}

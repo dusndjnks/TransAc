@@ -39,52 +39,58 @@ const brands = [
 
 export default function ProductBrands() {
   return (
-    <section className="bg-white lg:py-20 px-8 lg:px-10 xl:px-20 py-10" id="brands">
-      <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-            Trusted Product Brands
-          </h2>
-          <div className="w-20 h-1 bg-[#FF6B00] mx-auto mb-4 rounded-full"></div>
-          <p className="text-base text-gray-600 max-w-xl mx-auto">
-            We partner with global leaders in HVAC technology to deliver premium cooling solutions.
-          </p>
-        </div>
+    <section
+  className="bg-white lg:py-20 px-8 lg:px-10 xl:px-20 py-10"
+  id="brands"
+>
+  <div className="max-w-5xl mx-auto font-sans">
+    {/* Header */}
+    <div className="text-center mb-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-800 mb-2">
+        Trusted Product Brands
+      </h2>
+      <div className="w-20 h-1 bg-[#FF6B00] mx-auto mb-4 rounded-full"></div>
+      <p className="text-base text-gray-600 max-w-xl mx-auto">
+        We partner with global leaders in HVAC technology to deliver premium cooling solutions.
+      </p>
+    </div>
 
-        {/* Swiper */}
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
-          speed={600}
-          breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 24 },
-          }}
-        >
-          {brands.map((brand, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6  flex flex-col items-center text-center border-t-4 border-[#FF6B00] h-full min-h-[300px] mb-2">
-                <div className="w-24 h-20 mb-4 flex items-center justify-center bg-[#fff3e9] rounded-full overflow-hidden">
-                  <img
-                    src={brand.image}
-                    alt={brand.name}
-                    className="object-contain  h-full max-h-16"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-1">{brand.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed max-w-[240px]">
-                  {brand.description}
-                </p>
-                <div className="mt-3 text-[#FF6B00] font-medium text-sm hover:underline">
-                  Explore Products →
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
+    {/* Swiper */}
+    <Swiper
+      modules={[Autoplay]}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      loop={true}
+      speed={600}
+      breakpoints={{
+        0: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 24 },
+      }}
+    >
+      {brands.map((brand, index) => (
+        <SwiperSlide key={index}>
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col items-center text-center border-t-4 border-[#FF6B00] h-full min-h-[300px] mb-2">
+            <div className="w-24 h-20 mb-4 flex items-center justify-center bg-[#fff3e9] rounded-full overflow-hidden">
+              <img
+                src={brand.image}
+                alt={brand.name}
+                className="object-contain h-full max-h-16"
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1 font-heading">
+              {brand.name}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed max-w-[240px] font-sans">
+              {brand.description}
+            </p>
+            <div className="mt-3 text-[#FF6B00] font-medium text-sm hover:underline font-sans">
+              Explore Products →
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</section>
+
   );
 }
