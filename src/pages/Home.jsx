@@ -11,25 +11,26 @@ const Home = () => {
   return (
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
-      <section
-        id="home"
-        className="relative bg-cover bg-left md:bg-center bg-no-repeat h-[80vh] lg:h-screen flex items-center justify-center pt-[130px]"
-        style={{ backgroundImage: `url("https://images.pexels.com/photos/8089081/pexels-photo-8089081.jpeg")` }}
-      >
-        <div className="absolute inset-0  bg-bg-dark bg-opacity-60 z-0"></div>
+     <section
+  id="home"
+  className="relative bg-cover bg-left-top md:bg-center-top bg-no-repeat flex items-center justify-center pt-[130px] pb-16"
+  style={{ backgroundImage: `url("https://images.pexels.com/photos/8089081/pexels-photo-8089081.jpeg")` }}
+>
+  <div className="absolute inset-0 bg-bg-dark bg-opacity-60 z-0"></div>
 
-        <div className="relative z-10 max-w-8xl mx-auto px-6">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
-              Efficient Cooling Solutions <br className="hidden sm:block" />
-              for Every Home & Office
-            </h1>
-            <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-              Top-notch AC installation, repair & maintenance. Fast, reliable & energy-efficient.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="relative z-10 max-w-8xl mx-auto px-6">
+    <div className="text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6 text-primary">
+        Efficient Cooling Solutions <br className="hidden sm:block" />
+        for Every Home & Office
+      </h1>
+      <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+        Top-notch AC installation, repair & maintenance. Fast, reliable & energy-efficient.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-16 md:py-24">
