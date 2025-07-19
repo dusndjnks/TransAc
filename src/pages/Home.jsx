@@ -28,7 +28,7 @@ const Home = () => {
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-bg-dark bg-opacity-60 z-0" />
+  <div className="absolute inset-0 bg-bg-dark bg-opacity-70 z-0" />
 
   {/* Content */}
   <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
