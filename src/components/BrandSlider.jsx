@@ -2,14 +2,20 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import prdts1 from "../assets/prdts (1).png";
+import prdts2 from "../assets/prdts (2).png";
+import prdts3 from "../assets/prdts (3).png";
+import prdts4 from "../assets/prdts (4).png";
+import prdts5 from "../assets/prdts (5).png";
+import prdts6 from "../assets/prdts (6).png";
 
 const brands = [
-  "https://tse2.mm.bing.net/th/id/OIP.cywXPMjBYVj6ws5JBbb_zwHaHZ?pid=Api&P=0&h=180",
-  "https://companieslogo.com/img/orig/RELIANCE.NS-bb9f8a1b.png?t=1633628819",
-  "https://static.vecteezy.com/system/resources/previews/021/671/862/large_2x/asian-paints-logo-free-png.png",
-  "https://logos-world.net/wp-content/uploads/2020/11/HDFC-Bank-Logo.png",
-  "https://tse2.mm.bing.net/th/id/OIP.cywXPMjBYVj6ws5JBbb_zwHaHZ?pid=Api&P=0&h=180",
-  "https://companieslogo.com/img/orig/RELIANCE.NS-bb9f8a1b.png?t=1633628819",
+  prdts1,
+  prdts2,
+  prdts3,
+  prdts4,
+  prdts5,
+  prdts6,
 ];
 
 const BrandSlider = () => {

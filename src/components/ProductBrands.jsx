@@ -3,51 +3,51 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-import logo1 from "../assets/logo/kcvjbjkv (1).jpg";
-import logo2 from "../assets/logo/logo1.png";
-import logo3 from "../assets/logo/kcvjbjkv (2).jpg";
-import logo4 from "../assets/logo/logo2.png";
-import logo5 from "../assets/logo/kcvjbjkv (3).png";
+import logo1 from "../assets/logo/logo.png";
+import logo2 from "../assets/logo/logo2.png";
+import logo3 from "../assets/logo/logo3.png";
+import logo4 from "../assets/logo/logo4.png";
+import logo5 from "../assets/logo/logo5.png";
 
 const brands = [
   {
-    name: 'Carrier',
-    description: 'Carrier Midea India was set up in 2012 to deliver cutting-edge cooling technology.',
-    image: logo1,
-  },
-  {
-    name: 'Toshiba',
-    description: 'Toshiba has invested heavily in innovation over the last 30 years in HVAC systems.',
+    name: 'General',
+    description: 'General delivers high-performance air conditioning with unmatched durability and comfort.',
     image: logo2,
   },
   {
+    name: 'Mitsubishi',
+    description: 'Mitsubishi offers precision-engineered cooling systems designed for lasting efficiency.',
+    image: logo5,
+  },
+  {
     name: 'Daikin',
-    description: 'Daikin\'s Rajasthan plant creates energy-efficient products with Japanese precision.',
+    description: 'Daikin manufactures energy-efficient solutions, combining innovation with Japanese expertise.',
     image: logo3,
   },
   {
-    name: 'Voltas',
-    description: 'Voltas leads the Indian AC market with powerful and smart cooling solutions.',
-    image: logo4,
+    name: 'Toshiba',
+    description: 'Toshiba brings decades of innovation in HVAC technology with smart, reliable performance.',
+    image: logo1,
   },
   {
     name: 'Blue Star',
-    description: 'Blue Star offers industrial-grade cooling with uncompromising reliability.',
-    image: logo5,
+    description: 'Blue Star provides industrial-grade cooling with premium reliability and sleek design.',
+    image: logo4,
   },
 ];
 
 export default function ProductBrands() {
   return (
-    <section className="bg-white py-16 lg:py-24 px-4 lg:px-16" id="brands">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white lg:py-20 px-8 lg:px-10 xl:px-20 py-10" id="brands">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             Trusted Product Brands
           </h2>
-          <div className="w-24 h-1 bg-[#FF6B00] mx-auto mb-5 rounded-full"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-[#FF6B00] mx-auto mb-4 rounded-full"></div>
+          <p className="text-base text-gray-600 max-w-xl mx-auto">
             We partner with global leaders in HVAC technology to deliver premium cooling solutions.
           </p>
         </div>
@@ -57,25 +57,27 @@ export default function ProductBrands() {
           modules={[Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
-          speed={700}
+          speed={600}
           breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 24 },
-            768: { slidesPerView: 2, spaceBetween: 32 },
+            0: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 24 },
           }}
         >
           {brands.map((brand, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 mx-4 flex flex-col items-center text-center border-t-4 border-[#FF6B00] h-full">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 mb-6 flex items-center justify-center bg-[#fff3e9] rounded-full overflow-hidden">
+              <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6  flex flex-col items-center text-center border-t-4 border-[#FF6B00] h-full min-h-[300px] mb-2">
+                <div className="w-24 h-20 mb-4 flex items-center justify-center bg-[#fff3e9] rounded-full overflow-hidden">
                   <img
                     src={brand.image}
                     alt={brand.name}
-                    className="object-contain w-full h-full max-h-20"
+                    className="object-contain  h-full max-h-16"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{brand.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{brand.description}</p>
-                <div className="mt-6 text-[#FF6B00] font-medium text-sm hover:underline">
+                <h3 className="text-lg font-semibold text-gray-800 mb-1">{brand.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-[240px]">
+                  {brand.description}
+                </p>
+                <div className="mt-3 text-[#FF6B00] font-medium text-sm hover:underline">
                   Explore Products →
                 </div>
               </div>

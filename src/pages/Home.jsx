@@ -49,7 +49,7 @@ const Home = () => {
       <div className="w-full md:w-1/2">
         <div className="relative rounded-lg overflow-hidden shadow-md h-80 md:h-96 bg-gray-100">
           <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+            src={home1}
             alt="Our team at work"
             className="w-full h-full object-cover"
           />
@@ -68,7 +68,7 @@ const Home = () => {
         <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
           <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in top-tier brands including <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. We also specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your specific needs.
         </p>
-        <div className="space-y-4 mb-8">
+        <div className="space-x-4 mb-8 flex items-center justify-center ">
           <div className="flex items-center">
             <div className="bg-primary-light p-2 rounded-full mr-4">
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
