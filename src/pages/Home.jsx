@@ -13,10 +13,10 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative bg-cover bg-center bg-no-repeat h-[80vh] lg:h-screen flex items-center justify-center pt-[130px]"
+        className="relative bg-cover bg-left md:bg-center bg-no-repeat h-[80vh] lg:h-screen flex items-center justify-center pt-[130px]"
         style={{ backgroundImage: `url("https://images.pexels.com/photos/8089081/pexels-photo-8089081.jpeg")` }}
       >
-        <div className="absolute inset-0 bg-bg-dark bg-opacity-40 z-0"></div>
+        <div className="absolute inset-0  bg-bg-dark bg-opacity-60 z-0"></div>
 
         <div className="relative z-10 max-w-8xl mx-auto px-6">
           <div className="text-center">
