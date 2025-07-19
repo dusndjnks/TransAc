@@ -20,10 +20,10 @@ const Home = () => {
       <section
   id="home"
   className="relative bg-cover bg-center bg-no-repeat h-[80vh] lg:h-screen flex items-center justify-center pt-[130px]"
-  style={{ backgroundImage: `url(${gal4})` }}
+  style={{ backgroundImage: `url(${home1})` }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-bg-dark bg-opacity-60 z-0"></div>
+  <div className="absolute inset-0 bg-bg-dark bg-opacity-40 z-0"></div>
 
   {/* Content */}
   <div className="relative z-10 max-w-8xl mx-auto px-6">
