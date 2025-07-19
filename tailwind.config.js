@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],         // For body text
+        heading: ['Poppins', 'sans-serif'],    // For main headings
+        display: ['Playfair Display', 'serif'] // For featured headings/hero
+      },
       colors: {
         primary: '#f8821e',        // Main brand color
         'primary-light': '#f99f4d', // Light variant
