@@ -12,34 +12,23 @@ const Home = () => {
   return (
     <div className="font-sans text-gray-800"> 
 
-      {/* Header Section */}
-     <section
-  id="home"
-  className="relative w-full h-[65vh] lg:h-screen overflow-hidden"
->
-  {/* Background Video */}
-  <video
-    className="absolute top-0 left-0 w-full h-full object-cover z-0"
-    src={Hero}
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+    {/* Header Section */}
+    <section
+      id="home"
+      className="relative w-full h-[65vh] lg:h-screen bg-center bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${home3})` }} // Use an image instead of a video
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-bg-dark bg-opacity-80 z-0" />
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-bg-dark bg-opacity-70 z-0" />
-
-  {/* Content */}
-  <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
-    <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6 text-white">
-      Efficient Cooling Solutions <br className="hidden sm:block" />
-      for Every Home & Office
-    </h1>
-  </div>
-</section>
-
-
+      {/* Content */}
+      <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold font-display leading-tight mb-6 text-white">
+          Efficient Cooling Solutions <br className="hidden sm:block" />
+          for Every Home & Office
+        </h1>
+      </div>
+    </section>
 
       {/* About Section */}
       <section id="about" className="py-16 md:py-24">
