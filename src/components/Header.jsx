@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../assets/trans_india_ac_plaza_compressed__1__page-0001-removebg-preview.png";
+import logo from "../assets/LOGO.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,11 +87,11 @@ const Header = () => {
       )}
 
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto pr-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
-            <img src={logo} alt="Trans India Cooling Logo" className="h-14" />
+            <img src={logo} alt="Trans India Cooling Logo" className="h-10 pr-3" />
             <span
               className={`text-xl font-semibold ${
                 isScrolled ? "text-gray-900" : "text-white"

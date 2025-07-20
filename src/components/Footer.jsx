@@ -1,4 +1,4 @@
-import logo from "../assets/trans_india_ac_plaza_compressed__1__page-0001-removebg-preview.png";
+import logo from "../assets/LOGO.jpg";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <img 
             src={logo} 
             alt="Trans India Cooling Logo" 
-            className="h-14 "
+            className="h-10 "
           />
           <h2 className="text-xl font-bold text-gray-800">
             Trans India Cooling Solutions
