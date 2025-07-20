@@ -91,7 +91,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
-            <img src={logo} alt="Trans India Cooling Logo" className="h-10 pr-3" />
+            <img src={logo} alt="Trans India Cooling Logo" className="h-8 lg:h-10 pr-3" />
             <span
               className={`text-xl font-semibold ${
                 isScrolled ? "text-gray-900" : "text-white"
