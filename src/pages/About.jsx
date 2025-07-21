@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="font-sans">
 
-       <section className="bg-bg-dark text-white py-32 lg:py-40 text-center">
+       <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display text-primary">
           About Us
         </h1>
@@ -122,7 +122,7 @@ const About = () => {
 
       <section className="bg-bg-dark py-16 px-4 md:px-10 text-white">
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary mb-12">
+    <h2 className="text-3xl md:text-4xl font-bold font-display text-primary mb-12">
       Awards & Recognition
     </h2>
 
@@ -179,14 +179,16 @@ const About = () => {
           />
         </div>
         <div className="w-full lg:w-1/2 bg-primary text-white order-1 lg:order-2 flex flex-col justify-center">
-          <h1 className="text-2xl md:text-3xl font-bold px-6 md:px-12 pt-8 font-heading">
+          <h1 className="text-2xl md:text-3xl font-bold px-6 md:px-12 pt-8 font-display">
             Need Fast, Reliable AC Help? <br />
             Call Us Today!
           </h1>
           <div className="px-6 md:px-12 pt-6 pb-8">
             <button className="bg-white text-primary py-3 px-6 rounded shadow-md hover:bg-accent-2 transition flex items-center">
               <FontAwesomeIcon icon={faArrowRight} className="mr-2" />
-              +1 234 567 890
+              <a href="tel:+917558801625" className="hover:text-primary-600 transition-colors">
+              +91 7558801625
+            </a>
             </button>
           </div>
         </div>

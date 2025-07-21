@@ -30,7 +30,7 @@ export default function ProjectGallery() {
   return (
     <div className="font-sans">
       {/* 🔸 Hero Section */}
-      <section className="bg-bg-dark text-white py-20 lg:py-28 text-center">
+      <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display text-primary">
           Our Projects
         </h1>
