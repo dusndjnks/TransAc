@@ -12,14 +12,10 @@ const About = () => {
   return (
     <div className="font-sans">
 
-       <section className="bg-bg-dark text-white py-20 lg:py-40 text-center">
+       <section className="bg-bg-dark text-white py-32 lg:py-40 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display text-primary">
-          Expert AC Solutions Since 40 Years
+          About Us
         </h1>
-        <p className="text-white/70 mt-4 text-lg max-w-2xl mx-auto hidden md:flex px-5">
-          Your trusted partner for all air conditioning needs - from installation to repair,
-      we keep your space perfectly comfortable year-round.
-        </p>
       </section>
 
     {/* Intro Section */}
