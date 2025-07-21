@@ -12,10 +12,11 @@ const About = () => {
   return (
     <div className="font-sans">
 
-       <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
+         <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display text-primary">
           About Us
         </h1>
+        <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
       </section>
 
     {/* Intro Section */}
