@@ -11,6 +11,7 @@ import BlueStar from "./secondorypages/BlueStar.jsx"
 import Daikin from "./secondorypages/Daikin.jsx"
 import Mitsubishi from "./secondorypages/Mitsubishi.jsx"
 import WallMount from "./secondorypages/General/WallMount.jsx"
+import Casette from "./secondorypages/General/Casette.jsx"
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/bluestar" element={<BlueStar/>} />
         <Route path="/toshiba" element={<Toshiba/>} />
         <Route path="/wall-mounted" element={<WallMount/>} />
+        <Route path="/cassette" element={<Casette/>} />
       </Routes>
       <Footer/>
     </div>

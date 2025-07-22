@@ -2,113 +2,45 @@ import React, { useState } from "react";
 
 const categories = [
   {
-    name: "Tropical Innovation Inverter",
+    name: "Hyper Tropical Cassette (230V Single Phase)",
     products: [
       {
-        title: "ASGG18CETA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png",
+        title: "AUGA25FRTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-0000-vrf-indoor-circular-flow-cassette-small-01.png",
         features: [
-          "Inverter Technology",
-          "Tropical compressor for high ambient performance",
-          "Energy efficient with smart controls",
-        ],
-      },
-      {
-        title: "ASGG24CETA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png",
-        features: [
-          "Robust cooling for large rooms",
-          "Low-noise operation",
-          "Smart diagnostics",
-        ],
-      },
-      {
-        title: "ASGG30CETA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png",
-        features: [
-          "Wide airflow range",
-          "Inverter-based precise temperature control",
-          "Long-life filters",
-        ],
-      },
-      {
-        title: "ASGG36CETA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png",
-        features: [
-          "Heavy-duty cooling",
-          "Smart timer and remote",
-          "Advanced tropical compressor",
+          "Hyper tropical design",
+          "230V single phase power supply",
+          "High-efficiency cooling",
         ],
       },
     ],
   },
   {
-    name: "Efficient & Tropical Inverter",
+    name: "Eco Friendly Cassette (400V 3-Phase)",
     products: [
       {
-        title: "ASGG12CGTB-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg12-24cgtb-b-01.png",
+        title: "AUG36FUAS",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-cassette-aug36-54fuas-01.png",
         features: [
-          "Eco mode with quick cooling",
-          "Energy-saving inverter motor",
-          "Modern compact design",
+          "Eco friendly operation",
+          "400V 3-phase system",
+          "Wide airflow coverage",
         ],
       },
       {
-        title: "ASGG18CGTB-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg12-24cgtb-b-01.png",
+        title: "AUG54FUAS",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-cassette-aug36-54fuas-01.png",
         features: [
-          "Dual inverter for efficiency",
-          "Noise reduction system",
-          "Powerful cooling in seconds",
-        ],
-      },
-      {
-        title: "ASGG24CGTB-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg12-24cgtb-b-01.png",
-        features: [
-          "High SEER rating",
-          "Easy-clean air filters",
-          "Anti-rust body design",
-        ],
-      },
-    ],
-  },
-  {
-    name: "Tropical Inverter",
-    products: [
-      {
-        title: "ASGG12CPAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-24cptb-b-01.png",
-        features: [
-          "Smart control system",
-          "Tropical resilience for coastal areas",
-          "LED display",
-        ],
-      },
-      {
-        title: "ASGG18CPAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-24cptb-b-01.png",
-        features: [
-          "Fast dehumidification",
-          "Anti-dust pre-filters",
-          "Sleep mode",
-        ],
-      },
-      {
-        title: "ASGG24CPAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-24cptb-b-01.png",
-        features: [
-          "Built-in stabilizer",
-          "Powerful airflow for large spaces",
-          "Advanced refrigerant handling",
+          "Powerful 3-phase cassette unit",
+          "Silent operation",
+          "Energy-efficient design",
         ],
       },
     ],
   },
 ];
 
-const WallMount = () => {
+const Casette = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -121,7 +53,8 @@ const WallMount = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec";
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec";
 
     const formData = new FormData();
     formData.append("email", email);
@@ -148,24 +81,21 @@ const WallMount = () => {
     <div className="font-sans">
       <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold text-primary font-display">
-          General – Wall Mounted ACs
+          General – Cassette ACs
         </h1>
       </section>
 
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Discover General’s premium wall-mounted air conditioners. Designed to
-          perform in tropical climates, offering superior energy efficiency,
-          reliability, and advanced inverter technology.
+          Explore General’s cassette air conditioners built for energy efficiency, compact design,
+          and optimal airflow. Perfect for both residential and commercial environments.
         </p>
       </div>
 
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
         {categories.map((cat, idx) => (
           <div key={idx} className="space-y-6">
-            <h3 className="text-2xl font-heading font-semibold text-text-base">
-              {cat.name}
-            </h3>
+            <h3 className="text-2xl font-heading font-semibold text-text-base">{cat.name}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {cat.products.map((product, i) => (
                 <div
@@ -177,9 +107,7 @@ const WallMount = () => {
                     alt={product.title}
                     className="w-full h-44 object-contain mb-4"
                   />
-                  <div className="text-text-base font-medium text-lg">
-                    {product.title}
-                  </div>
+                  <div className="text-text-base font-medium text-lg">{product.title}</div>
 
                   <div className="mt-4 flex justify-center gap-4">
                     <button
@@ -266,4 +194,4 @@ const WallMount = () => {
   );
 };
 
-export default WallMount;
+export default Casette;
