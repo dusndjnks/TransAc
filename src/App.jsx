@@ -10,6 +10,7 @@ import Toshiba from "./secondorypages/Toshiba.jsx"
 import BlueStar from "./secondorypages/BlueStar.jsx"
 import Daikin from "./secondorypages/Daikin.jsx"
 import Mitsubishi from "./secondorypages/Mitsubishi.jsx"
+import WallMount from "./secondorypages/General/WallMount.jsx"
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/daikin" element={<Daikin/>} />
         <Route path="/bluestar" element={<BlueStar/>} />
         <Route path="/toshiba" element={<Toshiba/>} />
+        <Route path="/wall-mounted" element={<WallMount/>} />
       </Routes>
       <Footer/>
     </div>
