@@ -108,13 +108,27 @@ const WallMount = () => {
     setOpenFeatures((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Enquiry Submitted:", {
-      product: modal.product,
-      email,
-      phone,
-    });
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec"; // replace with your own script URL
+
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("product", modal.product);
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      });
+      alert("Enquiry sent successfully!");
+    } catch (error) {
+      console.error("Error!", error.message);
+      alert("Something went wrong.");
+    }
+
     setModal({ open: false, product: null });
     setEmail("");
     setPhone("");
@@ -167,7 +181,9 @@ const WallMount = () => {
                         : "Show Features"}
                     </button>
                     <button
-                      onClick={() => setModal({ open: true, product: product.title })}
+                      onClick={() =>
+                        setModal({ open: true, product: product.title })
+                      }
                       className="text-sm text-white bg-primary px-3 py-1.5 rounded-md hover:bg-primary-dark transition"
                     >
                       Enquire Now
