@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="font-sans">
 
-         <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
+      <section className="bg-bg-dark text-white py-32 md:py-48 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display text-primary">
           About Us
         </h1>
@@ -20,39 +20,39 @@ const About = () => {
       </section>
 
     {/* Intro Section */}
-      <div className="flex flex-col lg:flex-row mt-8 md:mt-16 lg:mt-32 gap-8 pb-5 md:pb-10 lg:mb-16">
-        <div className="w-full lg:w-1/2 px-4 md:px-8 flex justify-center items-center">
-          <img
-            src={about1}
-            alt="AC technician working"
-            className="w-full max-w-sm md:max-w-md lg:max-w-[550px] h-auto object-cover lg:ml-80"
-          />
-        </div>
-        <div className="w-full lg:w-1/2 bg-primary-dark text-white order-2 lg:order-1 flex flex-col justify-center lg:max-w-[650px] lg:ml-20">
-          <h1 className="text-2xl md:text-3xl font-bold px-6 md:px-12 pt-8 font-heading">
-            Precision Cooling Solutions <br />
-            Tailored to Your Comfort Needs
-          </h1>
-          <p className="pt-4 px-6 md:px-12 pb-8 text-lg text-white/70">
-            Founded as a small local HVAC service, we've grown into a premier AC specialist serving both residential and commercial clients. Our certified technicians combine technical expertise with a customer-first approach to deliver exceptional climate control solutions that stand the test of time.
-          </p>
-        </div>
+    <div className="flex flex-col lg:flex-row mt-8 md:mt-16 lg:mt-32 gap-4 pb-5 md:pb-10 lg:mb-16">
+      <div className="w-full lg:w-1/2 px-4 md:px-8 flex justify-center lg:ml-56 order-1 lg:order-1">
+        <img
+          src={about1}
+          alt="AC technician working"
+          className="w-full max-w-sm md:max-w-md lg:max-w-[550px] h-auto object-cover"
+        />
       </div>
+      <div className="w-full lg:w-1/2 bg-primary-dark text-white order-2 lg:order-2 flex flex-col justify-center">
+        <h1 className="text-2xl md:text-3xl font-bold px-6 md:px-12 pt-8 font-heading">
+          Precision Cooling Solutions <br />
+          Tailored to Your Comfort Needs
+        </h1>
+        <p className="pt-4 px-6 md:px-12 pb-8 text-lg text-white/70">
+          Founded as a small local HVAC service, we've grown into a premier AC specialist serving both residential and commercial clients. Our certified technicians combine technical expertise with a customer-first approach to deliver exceptional climate control solutions that stand the test of time.
+        </p>
+      </div>
+    </div>
 
     <div className="bg-bg-dark py-16 px-4 md:px-8 lg:px-0 text-white">
   <div className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-10 text-text-base">
-    
+
     {/* Our Mission */}
     <div className="lg:mr-64">
       <h1 className="text-2xl md:text-3xl font-bold font-heading text-white">Our Mission</h1>
       <p className="pt-6 text-white/80">
-        We strive to provide the most reliable and efficient plumbing
-        services, without <br className="hidden lg:block" />
-        compromising on quality or safety. We also aim to prove our quality
-        skills, fair <br className="hidden lg:block" />
-        prices and customer care, so that we continue our business
+        We strive to provide the most reliable and efficient air conditioning
+        solutions, without <br className="hidden lg:block" />
+        compromising on quality or performance. We also aim to prove our expert
+        service, fair <br className="hidden lg:block" />
+        pricing and customer care, so that we continue our business
         relationship for many <br className="hidden lg:block" />
-        years, beyond the first job we complete.
+        years, beyond the first system we install.
       </p>
     </div>
 
@@ -63,8 +63,8 @@ const About = () => {
       <div className="pt-6 flex items-start">
         <FontAwesomeIcon icon={faCircleCheck} className="mt-1 mr-2 text-primary flex-shrink-0" />
         <p className="text-white/80">
-          Consider honesty as the key to a business' <br className="hidden lg:block" />
-          trustworthiness and integrity.
+          Consider honesty as the key to a company’s <br className="hidden lg:block" />
+          trustworthiness and service quality.
         </p>
       </div>
 
@@ -72,7 +72,7 @@ const About = () => {
         <FontAwesomeIcon icon={faCircleCheck} className="mt-1 mr-2 text-primary flex-shrink-0" />
         <p className="text-white/80">
           Always do the right thing to solve the <br className="hidden lg:block" />
-          customer's problem.
+          customer's cooling requirement.
         </p>
       </div>
 
@@ -80,13 +80,14 @@ const About = () => {
         <FontAwesomeIcon icon={faCircleCheck} className="mt-1 mr-2 text-primary flex-shrink-0" />
         <p className="text-white/80">
           Perform all work with the highest level of <br className="hidden lg:block" />
-          excellence in mind.
+          expertise and professionalism.
         </p>
       </div>
     </div>
 
   </div>
-    </div>
+</div>
+
 
       {/* Why Choose Us */}
       <div className="flex flex-col lg:flex-row mt-8 md:mt-16 lg:mt-32 gap-4 pb-5 md:pb-10 lg:mb-16">

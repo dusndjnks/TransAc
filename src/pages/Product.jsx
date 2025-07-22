@@ -1,42 +1,49 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-// import acImage from "../assets/products/bluestarmain.webp"; // used for all brands
+
+import logo1 from "../assets/logo/logo.png";
+import logo2 from "../assets/logo/logo2.png";
+import logo3 from "../assets/logo/logo3.png";
+import logo4 from "../assets/logo/logo4.png";
+import logo5 from "../assets/logo/logo5.png";
 
 const brands = [
-   {
+  {
     name: "General",
     description:
       "General ACs provide consistent cooling and are trusted for their rugged build and performance in extreme climates.",
     link: "/brands/general",
+    image: logo2,
   },
   {
     name: "Mitsubishi",
     description:
       "Mitsubishi air conditioners are known for their advanced technology, whisper-quiet operation, and long-term durability.",
     link: "/brands/mitsubishi",
+    image: logo5,
   },
   {
     name: "Daikin",
     description:
       "Daikin is a global leader in air conditioning offering energy-efficient solutions with high reliability and innovation.",
     link: "/brands/daikin",
+    image: logo3,
   },
   {
     name: "Toshiba",
     description:
       "Toshiba ACs combine elegant design with powerful cooling technology, suitable for both homes and commercial use.",
     link: "/brands/toshiba",
+    image: logo1,
   },
   {
     name: "Blue Star",
     description:
       "Blue Star offers reliable, value-packed wall-mounted ACs with durable construction and solid performance.",
     link: "/brands/bluestar",
+    image: logo4,
   },
 ];
-
-const acImage = "http://s3-ap-southeast-1.amazonaws.com/hnsgsfp/9/images/detailed/9/Mitsubishi_MS-HK10VA.jpg"
 
 const Product = () => {
   return (
@@ -70,9 +77,9 @@ const Product = () => {
             <div className="grid md:grid-cols-2 lg:gap-10 items-center">
               <div className="flex justify-center">
                 <img
-                  src={acImage}
+                  src={brand.image}
                   alt={brand.name}
-                  className="md:h-72 px-5 md:py-8 "
+                  className="md:h-72 px-5 md:py-8 object-contain"
                 />
               </div>
               <div className="p-8 text-center md:text-left">

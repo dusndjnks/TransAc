@@ -5,6 +5,11 @@ import Home from "./pages/Home.jsx"
 import About from "./pages/About.jsx"
 import Product from "./pages/Product.jsx"
 import ProjectGallery from "./pages/Projects.jsx"
+import General from "./secondorypages/General.jsx"
+import Toshiba from "./secondorypages/Toshiba.jsx"
+import BlueStar from "./secondorypages/BlueStar.jsx"
+import Daikin from "./secondorypages/Daikin.jsx"
+import Mitsubishi from "./secondorypages/Mitsubishi.jsx"
 
 const App = () => {
   return (
@@ -15,6 +20,11 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<ProjectGallery />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/brands/general" element={<General/>} />
+        <Route path="/brands/mitsubishi" element={<Mitsubishi/>} />
+        <Route path="/brands/daikin" element={<Daikin/>} />
+        <Route path="/brands/bluestar" element={<BlueStar/>} />
+        <Route path="/brands/toshiba" element={<Toshiba/>} />
       </Routes>
       <Footer/>
     </div>
