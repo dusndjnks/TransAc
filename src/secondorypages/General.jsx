@@ -41,19 +41,16 @@ const General = () => {
   return (
     <div className="font-sans text-text-base bg-bg-light">
       {/* Hero with Logo */}
-      <section className="bg-bg-dark text-white py-16 md:py-48 lg:py-40 text-center">
+      <section className="bg-bg-dark text-white py-16 md:py-24 lg:py-20 text-center">
         <img
           src={generalLogo}
           alt="General Logo"
-          className="mx-auto h-40 md:h-32"
+          className="mx-auto h-40 md:h-56 lg:h-72"
         />
       </section>
 
       {/* Title + Description Below Hero */}
       <section className="bg-white py-12 px-6 md:px-40 text-center">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-primary">
-          General Air Conditioners
-        </h1>
         <p className="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
           Built for durability and high performance. General ACs keep you cool even in extreme conditions.
         </p>
