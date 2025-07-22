@@ -7,11 +7,35 @@ const categories = [
     products: [
       {
         title: "ASGG18CETA-B",
-        features: ["Powerful tropical inverter technology", "Energy-efficient", "Works up to 55°C"],
+        features: [
+          "Inverter Technology",
+          "Tropical compressor for high ambient performance",
+          "Energy efficient with smart controls",
+        ],
       },
       {
         title: "ASGG24CETA-B",
-        features: ["Robust compressor", "Smart airflow", "Antibacterial filter"],
+        features: [
+          "Robust cooling for large rooms",
+          "Low-noise operation",
+          "Smart diagnostics",
+        ],
+      },
+      {
+        title: "ASGG30CETA-B",
+        features: [
+          "Wide airflow range",
+          "Inverter-based precise temperature control",
+          "Long-life filters",
+        ],
+      },
+      {
+        title: "ASGG36CETA-B",
+        features: [
+          "Heavy-duty cooling",
+          "Smart timer and remote",
+          "Advanced tropical compressor",
+        ],
       },
     ],
   },
@@ -20,42 +44,82 @@ const categories = [
     products: [
       {
         title: "ASGG12CGTB-B",
-        features: ["Sleek design", "Eco refrigerant", "Turbo mode cooling"],
+        features: [
+          "Eco mode with quick cooling",
+          "Energy-saving inverter motor",
+          "Modern compact design",
+        ],
+      },
+      {
+        title: "ASGG18CGTB-B",
+        features: [
+          "Dual inverter for efficiency",
+          "Noise reduction system",
+          "Powerful cooling in seconds",
+        ],
+      },
+      {
+        title: "ASGG24CGTB-B",
+        features: [
+          "High SEER rating",
+          "Easy-clean air filters",
+          "Anti-rust body design",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Tropical Inverter",
+    products: [
+      {
+        title: "ASGG12CPAA-B",
+        features: [
+          "Smart control system",
+          "Tropical resilience for coastal areas",
+          "LED display",
+        ],
+      },
+      {
+        title: "ASGG18CPAA-B",
+        features: [
+          "Fast dehumidification",
+          "Anti-dust pre-filters",
+          "Sleep mode",
+        ],
+      },
+      {
+        title: "ASGG24CPAA-B",
+        features: [
+          "Built-in stabilizer",
+          "Powerful airflow for large spaces",
+          "Advanced refrigerant handling",
+        ],
       },
     ],
   },
 ];
 
 const WallMount = () => {
-  const [openFeatureIndex, setOpenFeatureIndex] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  const handleEnquire = (product) => {
-    setSelectedProduct(product);
-    setShowModal(true);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Enquiry Submitted:");
+    console.log("Product:", modal.product);
     console.log("Email:", email);
     console.log("Phone:", phone);
-    console.log("Product:", selectedProduct?.title);
-
-    // TODO: EmailJS or API submission here
-
-    setShowModal(false);
+    setModal({ open: false, product: null });
     setEmail("");
     setPhone("");
   };
 
   return (
     <div className="font-sans">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="bg-bg-dark py-24 text-center text-white">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-display py-20 md:py-24">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary font-display">
           General – Wall Mounted ACs
         </h1>
       </section>
@@ -68,65 +132,60 @@ const WallMount = () => {
         </p>
       </div>
 
-      {/* Product Categories */}
+      {/* Categories */}
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
-        {categories.map((cat, catIdx) => (
-          <div key={catIdx} className="space-y-6">
+        {categories.map((cat, idx) => (
+          <div key={idx} className="space-y-6">
             <h3 className="text-2xl font-heading font-semibold text-text-base">{cat.name}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {cat.products.map((product, prodIdx) => {
-                const isOpen = openFeatureIndex === `${catIdx}-${prodIdx}`;
-                return (
-                  <div
-                    key={prodIdx}
-                    className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center"
-                  >
-                    <img
-                      src="https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png"
-                      alt={product.title}
-                      className="w-full h-44 object-contain mb-4"
-                    />
-                    <div className="text-text-base font-medium text-lg mb-2">{product.title}</div>
+              {cat.products.map((product, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-xl shadow-md p-6 text-center relative"
+                >
+                  <img
+                    src="https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png"
+                    alt={product.title}
+                    className="w-full h-44 object-contain mb-4"
+                  />
+                  <div className="text-text-base font-medium text-lg">{product.title}</div>
 
-                    <div className="flex justify-center gap-4">
-                      <button
-                        onClick={() =>
-                          setOpenFeatureIndex(isOpen ? null : `${catIdx}-${prodIdx}`)
-                        }
-                        className="text-sm text-primary font-semibold hover:underline"
-                      >
-                        {isOpen ? "Hide Features" : "Show Features"}
-                      </button>
-
-                      <button
-                        onClick={() => handleEnquire(product)}
-                        className="text-sm text-white bg-primary px-3 py-1.5 rounded-md hover:bg-primary-dark transition"
-                      >
-                        Enquire Now
-                      </button>
-                    </div>
-
-                    {isOpen && (
-                      <ul className="mt-4 text-left text-sm text-gray-700 list-disc list-inside">
-                        {product.features.map((f, i) => (
-                          <li key={i}>{f}</li>
-                        ))}
-                      </ul>
-                    )}
+                  <div className="mt-4 flex justify-center gap-4">
+                    <button
+                      onClick={() => product.show = !product.show}
+                      className="text-sm text-primary font-semibold hover:underline"
+                    >
+                      {product.show ? "Hide Features" : "Show Features"}
+                    </button>
+                    <button
+                      onClick={() => setModal({ open: true, product: product.title })}
+                      className="text-sm text-white bg-primary px-3 py-1.5 rounded-md hover:bg-primary-dark transition"
+                    >
+                      Enquire Now
+                    </button>
                   </div>
-                );
-              })}
+
+                  {/* Show features */}
+                  {product.show && (
+                    <ul className="mt-4 text-left text-sm text-gray-700 list-disc list-inside">
+                      {product.features?.map((f, fi) => (
+                        <li key={fi}>{f}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         ))}
       </section>
 
-      {/* Enquiry Modal */}
-      {showModal && (
+      {/* Modal */}
+      {modal.open && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
           <div className="bg-white rounded-xl shadow-lg max-w-md w-full p-6">
             <h3 className="text-lg font-semibold mb-4 text-text-base">
-              Enquire About: {selectedProduct?.title}
+              Enquire About: {modal.product}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
@@ -148,13 +207,13 @@ const WallMount = () => {
               <input
                 type="text"
                 readOnly
-                value={selectedProduct?.title}
+                value={modal.product}
                 className="w-full bg-gray-100 border border-gray-200 rounded px-3 py-2 text-sm"
               />
               <div className="flex justify-end gap-3">
                 <button
                   type="button"
-                  onClick={() => setShowModal(false)}
+                  onClick={() => setModal({ open: false, product: null })}
                   className="text-sm px-4 py-2 border rounded-md text-gray-600 hover:bg-gray-100"
                 >
                   Cancel
