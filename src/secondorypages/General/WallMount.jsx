@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import generalLogo from "../../assets/logo/logo2.png";
 
 const categories = [
   {
@@ -103,13 +102,19 @@ const WallMount = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [openFeatures, setOpenFeatures] = useState({});
+
+  const toggleFeatures = (title) => {
+    setOpenFeatures((prev) => ({ ...prev, [title]: !prev[title] }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Enquiry Submitted:");
-    console.log("Product:", modal.product);
-    console.log("Email:", email);
-    console.log("Phone:", phone);
+    console.log("Enquiry Submitted:", {
+      product: modal.product,
+      email,
+      phone,
+    });
     setModal({ open: false, product: null });
     setEmail("");
     setPhone("");
@@ -117,45 +122,49 @@ const WallMount = () => {
 
   return (
     <div className="font-sans">
-      {/* Hero Section */}
-      <section className="bg-bg-dark py-24 text-center text-white">
+      <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold text-primary font-display">
           General – Wall Mounted ACs
         </h1>
       </section>
 
-      {/* Description */}
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Discover General’s premium wall-mounted air conditioners. Designed to perform in tropical
-          climates, offering superior energy efficiency, reliability, and advanced inverter technology.
+          Discover General’s premium wall-mounted air conditioners. Designed to
+          perform in tropical climates, offering superior energy efficiency,
+          reliability, and advanced inverter technology.
         </p>
       </div>
 
-      {/* Categories */}
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
         {categories.map((cat, idx) => (
           <div key={idx} className="space-y-6">
-            <h3 className="text-2xl font-heading font-semibold text-text-base">{cat.name}</h3>
+            <h3 className="text-2xl font-heading font-semibold text-text-base">
+              {cat.name}
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {cat.products.map((product, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow-md p-6 text-center relative"
+                  className="bg-white rounded-xl shadow-md p-6 text-center"
                 >
                   <img
                     src="https://www.general-hvac.com/shared/in/img-gcin-split-wall-asgg18-36-ceta-b-01.png"
                     alt={product.title}
                     className="w-full h-44 object-contain mb-4"
                   />
-                  <div className="text-text-base font-medium text-lg">{product.title}</div>
+                  <div className="text-text-base font-medium text-lg">
+                    {product.title}
+                  </div>
 
                   <div className="mt-4 flex justify-center gap-4">
                     <button
-                      onClick={() => product.show = !product.show}
+                      onClick={() => toggleFeatures(product.title)}
                       className="text-sm text-primary font-semibold hover:underline"
                     >
-                      {product.show ? "Hide Features" : "Show Features"}
+                      {openFeatures[product.title]
+                        ? "Hide Features"
+                        : "Show Features"}
                     </button>
                     <button
                       onClick={() => setModal({ open: true, product: product.title })}
@@ -165,10 +174,9 @@ const WallMount = () => {
                     </button>
                   </div>
 
-                  {/* Show features */}
-                  {product.show && (
+                  {openFeatures[product.title] && (
                     <ul className="mt-4 text-left text-sm text-gray-700 list-disc list-inside">
-                      {product.features?.map((f, fi) => (
+                      {product.features.map((f, fi) => (
                         <li key={fi}>{f}</li>
                       ))}
                     </ul>
@@ -180,7 +188,6 @@ const WallMount = () => {
         ))}
       </section>
 
-      {/* Modal */}
       {modal.open && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
           <div className="bg-white rounded-xl shadow-lg max-w-md w-full p-6">
