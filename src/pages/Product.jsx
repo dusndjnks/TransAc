@@ -12,35 +12,35 @@ const brands = [
     name: "General",
     description:
       "General ACs provide consistent cooling and are trusted for their rugged build and performance in extreme climates.",
-    link: "/brands/general",
+    link: "/general",
     image: logo2,
   },
   {
     name: "Mitsubishi",
     description:
       "Mitsubishi air conditioners are known for their advanced technology, whisper-quiet operation, and long-term durability.",
-    link: "/brands/mitsubishi",
+    link: "/mitsubishi",
     image: logo5,
   },
   {
     name: "Daikin",
     description:
       "Daikin is a global leader in air conditioning offering energy-efficient solutions with high reliability and innovation.",
-    link: "/brands/daikin",
+    link: "/daikin",
     image: logo3,
   },
   {
     name: "Toshiba",
     description:
       "Toshiba ACs combine elegant design with powerful cooling technology, suitable for both homes and commercial use.",
-    link: "/brands/toshiba",
+    link: "/toshiba",
     image: logo1,
   },
   {
     name: "Blue Star",
     description:
       "Blue Star offers reliable, value-packed wall-mounted ACs with durable construction and solid performance.",
-    link: "/brands/bluestar",
+    link: "/bluestar",
     image: logo4,
   },
 ];
