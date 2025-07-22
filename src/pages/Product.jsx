@@ -6,6 +6,7 @@ import logo2 from "../assets/logo/logo2.png";
 import logo3 from "../assets/logo/logo3.png";
 import logo4 from "../assets/logo/logo4.png";
 import logo5 from "../assets/logo/logo5.png";
+import { NavLink } from "react-router-dom";
 
 const brands = [
   {
@@ -89,13 +90,13 @@ const Product = () => {
                 <p className="text-text-light text-base mb-6">
                   {brand.description}
                 </p>
-                <a
-                  href={brand.link}
+                <NavLink
+                  to={brand.link}
                   className="inline-flex items-center text-primary font-semibold hover:underline"
                 >
                   Check Products{" "}
                   <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
