@@ -6,29 +6,46 @@ import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
 import ProductBrands from "../components/ProductBrands";
-import Hero from "../assets/hero.mp4";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
+
+const home4 = "https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg"
+const home5 = "https://images.pexels.com/photos/29252367/pexels-photo-29252367.jpeg"
+
 
 const Home = () => {
   return (
     <div className="font-sans text-gray-800"> 
 
-    {/* Header Section */}
-    <section
-      id="home"
-      className="relative w-full h-[65vh] lg:h-screen bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${home3})` }} // Use an image instead of a video
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-bg-dark bg-opacity-80 z-0" />
+{/* Slider Section */}
+<section id="home" className="relative w-full h-[65vh] lg:h-screen">
+  <Swiper
+    modules={[Autoplay]}
+    autoplay={{ delay: 5000, disableOnInteraction: false }}
+    loop={true}
+    className="w-full h-full"
+  >
+    {[home1, home5, home4].map((image, idx) => (
+      <SwiperSlide key={idx}>
+        <div
+          className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <div className="absolute inset-0 bg-bg-dark bg-opacity-80 z-0" />
+          <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold font-display leading-tight mb-6 text-white">
+              Efficient Cooling Solutions <br className="hidden sm:block" />
+              for Every Home & Office
+            </h1>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold font-display leading-tight mb-6 text-white">
-          Efficient Cooling Solutions <br className="hidden sm:block" />
-          for Every Home & Office
-        </h1>
-      </div>
-    </section>
 
       {/* About Section */}
       <section id="about" className="py-16 md:py-24">
@@ -49,8 +66,9 @@ const Home = () => {
                 About Our Company
               </h2>
               <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
-                <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>.
-              </p>
+                  <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. We also specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your <span className="text-primary">specific needs</span>.
+                </p>
+
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3">
                   <div className="bg-primary-light p-2 rounded-full">
