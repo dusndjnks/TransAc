@@ -51,7 +51,7 @@ const General = () => {
           <img
             src={generalLogo}
             alt="General Logo"
-            className="mx-auto h-40 md:h-56 lg:h-72"
+            className="mx-auto py-16 px-20 md:h-56 lg:h-72"
           />
         </div>
       </section>

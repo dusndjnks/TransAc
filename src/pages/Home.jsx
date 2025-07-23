@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom"
 import BrandSlider from "../components/BrandSlider"
 import TestimonialSlider from "../components/Testimonials"
 import GallerySection from "../components/GallerySection"
+import Form from "../components/Form"
+import Products from "../components/Products"
 import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
@@ -12,11 +14,15 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 
+
 const home4 = "https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg"
 const home5 = "https://images.pexels.com/photos/29252367/pexels-photo-29252367.jpeg"
 
 
+
+
 const Home = () => {
+
   return (
     <div className="font-sans text-gray-800">
 
@@ -52,8 +58,6 @@ const Home = () => {
       </Swiper>
     </section>
 
-
-
       {/* About Section */}
       <section id="about" className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
@@ -69,14 +73,15 @@ const Home = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
                 About Our Company
               </h2>
-              <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
-                  <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. We also specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your <span className="text-primary">specific needs</span>.
+              <p className="text-gray-600 text-[15px] leading-relaxed mb-4">
+                  <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. We also deal in top-tier brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your <span className="text-primary">specific needs</span>.
                 </p>
 
-              <div className="space-y-3 mb-8">
+
+              <div className="space-y-3 mb-5 flex">
                 <div className="flex items-center gap-3">
                   <div className="bg-primary-light p-2 rounded-full">
                     <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,6 +110,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Products/>
 
       {/* Brands & Gallery */}
       <BrandSlider />
@@ -181,6 +188,9 @@ const Home = () => {
 
       {/* Testimonials */}
       <TestimonialSlider />
+      <Form />
+
+      {/* Final CTA */}
     </div>
   );
 };

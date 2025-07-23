@@ -12,7 +12,7 @@ const GallerySection = () => {
 
 <div className="text-center max-w-2xl pb-10">
   <NavLink
-    to="/projects"
+    to="/project"
     className="inline-flex items-center justify-center gap-3 text-3xl md:text-4xl font-heading font-bold text-[#f8821e] group hover:underline"
   >
     Our Recent Works
@@ -37,7 +37,7 @@ const GallerySection = () => {
               Centralised Air Conditioning
             </h3>
             <NavLink
-              to="/projects"
+              to="/project"
               className="bg-[#f8821e] hover:bg-[#e67212] text-white text-sm font-semibold py-2 px-4 rounded uppercase transition"
             >
               View More
@@ -59,7 +59,7 @@ const GallerySection = () => {
               Centralised Air Conditioning
             </h3>
             <NavLink
-              to="/projects"
+              to="/project"
               className="bg-[#f8821e] hover:bg-[#e67212] text-white text-sm font-semibold py-2 px-4 rounded uppercase transition"
             >
               View More

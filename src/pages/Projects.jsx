@@ -1,28 +1,68 @@
-import React from "react";
+import PreviousWorks from "../components/PreviousWorks";
 
-// Sample data — replace these with real media
+import prjcts1 from "../assets/projects/prjcts (1).jpg";
+import prjcts2 from "../assets/projects/prjcts (1).mp4";
+import prjcts3 from "../assets/projects/prjcts (1).png";
+import prjcts4 from "../assets/projects/prjcts (2).jpg";
+import prjcts5 from "../assets/projects/prjcts (2).mp4";
+import prjcts6 from "../assets/projects/prjcts (3).jpg";
+import prjcts7 from "../assets/projects/prjcts (4).jpg";
+import prjcts8 from "../assets/projects/prjcts (5).jpg";
+
 const projects = [
   {
     type: "image",
-    src: "/assets/projects/project1.jpg",
+    src: prjcts1,
     alt: "Residential AC installation",
-    title: "3 Ton Split Installation – Villa",
+    title: "Central pictures",
+    description: "Chenganaserry , 70 Ton",
   },
   {
     type: "video",
-    src: "https://www.youtube.com/embed/XhDflZzZNV8",
-    title: "AC Service Time-lapse",
+    src: prjcts5,
+    title: "St sebastin church hall",
+    description: "Chelad , 90 Ton",
   },
   {
     type: "image",
-    src: "/assets/projects/project2.jpg",
+    src: prjcts3,
+    alt: "Residential AC installation",
+    title: "Gokulam residency ",
+    description: "57 hp vrf centralised",
+  },
+  {
+    type: "image",
+    src: prjcts6,
+    alt: "Residential AC installation",
+    title: "Silver tips kothamangalam",
+    description: "Kothamangalam , 240 Ton",
+  },
+  {
+    type: "image",
+    src: prjcts7,
+    alt: "Residential AC installation",
+    title: "Cheriya pally convention centre",
+    description: "Kothamangalam , 360 Ton",
+  },
+  {
+    type: "image",
+    src: prjcts8,
+    alt: "Residential AC installation",
+    title: "Architect lilly paul site",
+    description: "Thrisur centralised",
+  },
+  {
+    type: "image",
+    src: prjcts4,
     alt: "Commercial HVAC unit setup",
-    title: "HVAC Duct Setup – Mall",
+    title: "Evm cinemas kothamangalam",
+    description: "adimaly, kumily ,Muvatupuzha, mattanchery 450 ton",
   },
   {
     type: "video",
-    src: "https://www.youtube.com/embed/2YBtspm8j8M",
-    title: "Office AC Piping Walkthrough",
+    src: prjcts2,
+    title: "Gardenia convention centre",
+    description: "Varkala , 110 Ton",
   },
 ];
 
@@ -37,43 +77,41 @@ export default function ProjectGallery() {
         <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
       </section>
 
-      {/* 🔹 Media Showcase Section */}
+      {/* 🔹 Combined Masonry Layout */}
       <section className="bg-bg-light py-16 px-4 md:px-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
             {projects.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200"
+                className="break-inside-avoid rounded-lg overflow-hidden shadow border border-gray-200 bg-white"
               >
                 {item.type === "image" ? (
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-72 object-cover"
+                    className="w-full object-cover"
                   />
                 ) : (
-                  <div className="relative w-full h-72">
-                    <iframe
-                      src={item.src}
-                      title={item.title}
-                      className="w-full h-full"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
+                  <video
+                    src={item.src}
+                    controls
+                    className="w-full h-auto"
+                  />
                 )}
-                <div className="p-4 text-center">
+                <div className="p-3 text-center">
                   <h3 className="text-lg font-semibold text-text-base">
                     {item.title}
                   </h3>
+                  <p className="text-sm text-text-light">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <PreviousWorks/>
     </div>
   );
 }

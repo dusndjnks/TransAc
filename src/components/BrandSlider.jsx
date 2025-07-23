@@ -8,6 +8,14 @@ import prdts3 from "../assets/prdts (3).png";
 import prdts4 from "../assets/prdts (4).png";
 import prdts5 from "../assets/prdts (5).png";
 import prdts6 from "../assets/prdts (6).png";
+import prdts7 from "../assets/logo/logo1 (1).png"
+import prdts8 from "../assets/logo/logo1 (2).png";
+import prdts9 from "../assets/logo/logo1 (3).png";
+import prdts10 from "../assets/logo/logo1 (4).png";
+import prdts11 from "../assets/logo/logo1 (5).png";
+import prdts12 from "../assets/logo/logo1 (6).png";
+import prdts13 from "../assets/logo/logo1 (7).png";
+
 
 const brands = [
   prdts1,
@@ -16,6 +24,13 @@ const brands = [
   prdts4,
   prdts5,
   prdts6,
+  prdts7,
+  prdts8,
+  prdts9,
+  prdts10,
+  prdts11,
+  prdts12,
+  prdts13,
 ];
 
 const BrandSlider = () => {
@@ -34,15 +49,15 @@ const BrandSlider = () => {
       <Swiper
         modules={[Autoplay]}
         loop={true}
-        freeMode={true}
-        speed={3000}
+        freeMode={false}
+        speed={1000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         }}
         slidesPerView={3}
-        spaceBetween={40}
+        spaceBetween={30}
         breakpoints={{
           640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
