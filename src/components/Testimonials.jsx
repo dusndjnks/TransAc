@@ -6,26 +6,26 @@ import "swiper/css/autoplay";
 
 const testimonials = [
   {
-    name: "Ravi Menon",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Anantha Krishnan",
+    img: "https://lh3.googleusercontent.com/a-/ALV-UjXTyrr7PdUJeWZPTe4S-rsrBSrZpor6M-PsZxgSORWfFlT0-Q5lcw=w90-h90-p-rp-mo-ba2-br100",
     text: "Trans India provided an excellent AC installation service. The team was quick, efficient, and very professional.",
     rating: 5,
   },
   {
-    name: "Sneha Pillai",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Sabari P",
+    img: "https://lh3.googleusercontent.com/a-/ALV-UjUfKTKpZlc1xqmhsw5GdSoCxGJcVE4WtYsZ93xxN_AQ87rL0lPM=w90-h90-p-rp-mo-br100",
     text: "Their technicians diagnosed the issue with my old AC quickly and had it running in no time. Highly recommended!",
     rating: 4,
   },
   {
-    name: "John Mathew",
-    img: "https://randomuser.me/api/portraits/men/53.jpg",
+    name: "gokulan v.s",
+    img: "https://lh3.googleusercontent.com/a-/ALV-UjXgK0pn3SlH1bz39CvGSOeUfDVuxRYhxIWkkCFTY2E8g8V-EZ4=w90-h90-p-rp-mo-ba3-br100",
     text: "Great customer support and top-quality air conditioning systems. I’ve had no issues since installation.",
     rating: 5,
   },
   {
-    name: "Divya Rajan",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Aleena Alan",
+    img: "https://lh3.googleusercontent.com/a-/ALV-UjVO3VwQ8i-PecueOoPjCqwOpopw2x1askh93IFLbFalXYZpYUE=w90-h90-p-rp-mo-br100",
     text: "I had a wonderful experience with their team. Clean work, timely response, and affordable pricing.",
     rating: 4,
   },

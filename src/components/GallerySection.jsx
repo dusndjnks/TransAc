@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
-import gal1 from "../assets/IMG-20250714-WA0021.jpg";
-import gal2 from "../assets/IMG-20250714-WA0028.jpg";
+import gal2 from "../assets/project9.png";
 import gal3 from "../assets/IMG-20250714-WA0029.jpg";
-import gal4 from "../assets/IMG-20250714-WA0030.jpg";
+
 
 const GallerySection = () => {
   return (
@@ -51,7 +50,7 @@ const GallerySection = () => {
       <div className="col-span-12 lg:col-span-4">
         <div className="relative overflow-hidden rounded-2xl shadow shadow-[#f8821e]/20 h-[300px] lg:h-[350px]">
           <img
-            src={gal1}
+            src={gal2}
             alt="Ambient interior"
             className="w-full h-full object-cover"
           />

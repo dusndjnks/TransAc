@@ -199,51 +199,51 @@ const About = () => {
   );
 };
 
-// Testimonial card
-const TestimonialCard = ({ person }) => (
-  <div className="bg-white p-6 shadow-md rounded-lg">
-    <div className="flex gap-1 mb-4 justify-start">
-      {[...Array(5)].map((_, idx) => (
-        <svg
-          key={idx}
-          className="w-5 h-5 text-yellow-400"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M10 15l-5.878 3.09 1.122-6.545L0 6.545l6.561-.955L10 0l3.439 5.59L20 6.545l-5.244 4.999 1.122 6.545z" />
-        </svg>
-      ))}
-    </div>
-    <p className="text-text-light mb-4">
-      "Our office AC system failed in peak summer. They arrived within 2 hours,
-      diagnosed the issue quickly, and had us cooling again by end of day.
-      Professional service from start to finish!"
-    </p>
-    <div className="flex items-center gap-4 mt-4">
-      <img
-        src={person.img}
-        alt={person.name}
-        className="w-12 h-12 rounded-full object-cover"
-      />
-      <h3 className="text-lg font-semibold text-text-base">{person.name}</h3>
-    </div>
-  </div>
-);
+      // Testimonial card
+      const TestimonialCard = ({ person }) => (
+        <div className="bg-white p-6 shadow-md rounded-lg">
+          <div className="flex gap-1 mb-4 justify-start">
+            {[...Array(5)].map((_, idx) => (
+              <svg
+                key={idx}
+                className="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 15l-5.878 3.09 1.122-6.545L0 6.545l6.561-.955L10 0l3.439 5.59L20 6.545l-5.244 4.999 1.122 6.545z" />
+              </svg>
+            ))}
+          </div>
+          <p className="text-text-light mb-4">
+            "Our office AC system failed in peak summer. They arrived within 2 hours,
+            diagnosed the issue quickly, and had us cooling again by end of day.
+            Professional service from start to finish!"
+          </p>
+          <div className="flex items-center gap-4 mt-4">
+            <img
+              src={person.img}
+              alt={person.name}
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <h3 className="text-lg font-semibold text-text-base">{person.name}</h3>
+          </div>
+        </div>
+      );
 
-const testimonials = [
-  {
-    name: "Martin Foster",
-    img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/04/customer-1-150x150.jpg",
-  },
-  {
-    name: "Bryan Cirius",
-    img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/06/customer-4-150x150.jpg",
-  },
-  {
-    name: "Jane Dowser",
-    img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/04/customer-3-150x150.jpg",
-  },
-  // Duplicates removed - you might want to use unique data
-];
+      const testimonials = [
+        {
+          name: "Martin Foster",
+          img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/04/customer-1-150x150.jpg",
+        },
+        {
+          name: "Bryan Cirius",
+          img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/06/customer-4-150x150.jpg",
+        },
+        {
+          name: "Jane Dowser",
+          img: "https://websitedemos.net/local-business-02/wp-content/uploads/sites/832/2021/04/customer-3-150x150.jpg",
+        },
+        // Duplicates removed - you might want to use unique data
+      ];
 
 export default About;

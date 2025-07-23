@@ -7,9 +7,10 @@ import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
 import ProductBrands from "../components/ProductBrands";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
+import "swiper/css/effect-fade";
+
 
 const home4 = "https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg"
 const home5 = "https://images.pexels.com/photos/29252367/pexels-photo-29252367.jpeg"
@@ -17,34 +18,40 @@ const home5 = "https://images.pexels.com/photos/29252367/pexels-photo-29252367.j
 
 const Home = () => {
   return (
-    <div className="font-sans text-gray-800"> 
+    <div className="font-sans text-gray-800">
 
-{/* Slider Section */}
-<section id="home" className="relative w-full h-[65vh] lg:h-screen">
-  <Swiper
-    modules={[Autoplay]}
-    autoplay={{ delay: 5000, disableOnInteraction: false }}
-    loop={true}
-    className="w-full h-full"
-  >
-    {[home1, home5, home4].map((image, idx) => (
-      <SwiperSlide key={idx}>
-        <div
-          className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="absolute inset-0 bg-bg-dark bg-opacity-80 z-0" />
-          <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold font-display leading-tight mb-6 text-white">
-              Efficient Cooling Solutions <br className="hidden sm:block" />
-              for Every Home & Office
-            </h1>
-          </div>
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</section>
+    <section id="home" className="relative w-full h-[65vh] lg:h-screen">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop={true}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={500} // Smoother fade duration
+        className="w-full h-full"
+      >
+        {[home3, home5, home4].map((image, idx) => (
+          <SwiperSlide key={idx}>
+            <div
+              className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
+              style={{ backgroundImage: `url(${image})` }}
+            >
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-bg-dark bg-opacity-80 z-0" />
+
+              {/* Slide Content */}
+              <div className="relative z-10 max-w-8xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold font-display leading-tight mb-6 text-white">
+                  Efficient Cooling Solutions <br className="hidden sm:block" />
+                  for Every Home & Office
+                </h1>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+
 
 
       {/* About Section */}
@@ -129,12 +136,12 @@ const Home = () => {
             {[
               {
                 img: home2,
-                location: "Perumbavoor",
+                location: "Kothamangalam",
                 link: "https://maps.app.goo.gl/YPFFb6Y3Woeb1Ket8"
               },
               {
                 img: home1,
-                location: "Kothamangalam",
+                location: "Perumbavoor",
                 link: "https://maps.app.goo.gl/xhbCWRAXwSsUkKVm6"
               },
               {
@@ -154,7 +161,7 @@ const Home = () => {
                 />
                 <div className="p-4 text-center">
                   <h3 className="font-medium text-lg text-[#1E293B]">
-                    Trans India AC, {showroom.location}
+                    Trans India , {showroom.location}
                   </h3>
                   <a
                     href={showroom.link}
