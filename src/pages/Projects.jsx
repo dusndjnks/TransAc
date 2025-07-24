@@ -8,8 +8,24 @@ import prjcts5 from "../assets/projects/prjcts (2).mp4";
 import prjcts6 from "../assets/projects/prjcts (3).jpg";
 import prjcts7 from "../assets/projects/prjcts (4).jpg";
 import prjcts8 from "../assets/projects/prjcts (5).jpg";
+import prjcts9 from "../assets/projects/projects6.jpg"
+import prjcts10 from "../assets/projects/projects7.jpg"
 
 const projects = [
+  {
+    type: "image",
+    src: prjcts10,
+    alt: "Residential AC installation",
+    title: "Skyline legends",
+    description: " vrf 700-hp",
+  },
+  {
+    type: "image",
+    src: prjcts9,
+    alt: "Residential AC installation",
+    title: "Site reliant credits ",
+    description: "VRF",
+  },
   {
     type: "image",
     src: prjcts1,

@@ -1,25 +1,29 @@
 import React, { useState } from "react";
 
-const blueStarData = [
+const categories = [
   {
-    name: "Packaged Ducted Split AC",
+    name: "Stable Power Inverter Ducted AC Series",
     products: [
       {
-        title: "Blue Star – Packaged Ducted Split Air Conditioner",
-        image: "https://www.bluestarindia.com/media/78808/acs-thumb-1.jpg",
+        title: "Toshiba Stable Power Inverter Ducted AC",
+        image:
+          "https://www.toshibaac.in/images/products/ducted/stable-power-inverter.jpg",
         features: [
-          "Scroll compressor for higher efficiency",
-          "Factory charged with eco-friendly refrigerant",
-          "Wide operating voltage range",
-          "Easy ducting and installation flexibility",
-          "Microprocessor-based controls",
+          "Stable Power Inverter technology for consistent performance",
+          "Wide operating voltage range (198V – 264V)",
+          "High energy efficiency and low running cost",
+          "Compact and lightweight indoor unit design",
+          "Powerful airflow for uniform cooling",
+          "Flexible installation for various duct layouts",
+          "Quiet operation for enhanced comfort",
+          "Advanced microprocessor control",
         ],
       },
     ],
   },
 ];
 
-const BlueStar = () => {
+const ToshibaDucted = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -45,35 +49,34 @@ const BlueStar = () => {
         method: "POST",
         body: formData,
       });
-      alert("Enquiry sent successfully!");
+      setModal({ open: false, product: null });
+      setEmail("");
+      setPhone("");
     } catch (error) {
-      console.error("Error!", error.message);
-      alert("Something went wrong.");
+      setModal({ open: false, product: null });
+      setEmail("");
+      setPhone("");
     }
-
-    setModal({ open: false, product: null });
-    setEmail("");
-    setPhone("");
   };
 
   return (
     <div className="font-sans">
       <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold text-primary font-display px-4">
-          Blue Star – Packaged Ducted ACs
+          Toshiba Stable Power Inverter Ducted AC
         </h1>
       </section>
 
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Discover Blue Star's advanced ducted split air conditioners, engineered
-          for commercial environments. High-capacity cooling, flexible ducting,
-          and energy-efficient performance.
+          The Toshiba Stable Power Inverter Ducted AC is engineered for reliable,
+          energy-efficient cooling in demanding environments, with advanced inverter
+          technology and flexible installation options.
         </p>
       </div>
 
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
-        {blueStarData.map((cat, idx) => (
+        {categories.map((cat, idx) => (
           <div key={idx} className="space-y-6">
             <h3 className="text-2xl font-heading font-semibold text-text-base">
               {cat.name}
@@ -178,4 +181,4 @@ const BlueStar = () => {
   );
 };
 
-export default BlueStar;
+export default ToshibaDucted;

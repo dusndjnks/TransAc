@@ -81,7 +81,7 @@ const Home = () => {
                 </p>
 
 
-              <div className="space-y-3 mb-5 flex">
+              <div className="sm:space-x-3 mb-5 flex">
                 <div className="flex items-center gap-3">
                   <div className="bg-primary-light p-2 rounded-full">
                     <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -8,11 +8,15 @@ import Product from "./pages/Product.jsx";
 import ProjectGallery from "./pages/Projects.jsx";
 import General from "./secondorypages/General.jsx";
 import Toshiba from "./secondorypages/Toshiba.jsx";
-import BlueStar from "./secondorypages/BlueStar.jsx";
 import Daikin from "./secondorypages/Daikin.jsx";
 import Mitsubishi from "./secondorypages/Mitsubishi.jsx";
-import WallMount from "./secondorypages/General/WallMount.jsx";
-import Casette from "./secondorypages/General/Casette.jsx";
+import WallMount from "./pages/brands/General/WallMount.jsx";
+import Casette from "./pages/brands/General/Casette.jsx";
+import Vrf from "./pages/brands/General/Vrf.jsx";
+import Duct from "./pages/brands/General/Duct.jsx";
+import BlueStar from "./secondorypages/BlueStar.jsx"; // ✅ Import BlueStar component
+import ToshibaCassette from "./pages/brands/toshiba/Casette.jsx";
+import ToshibaDucted from "./pages/brands/toshiba/Ducted.jsx";
 
 const App = () => {
   return (
@@ -27,10 +31,15 @@ const App = () => {
         <Route path="/general" element={<General />} />
         <Route path="/mitsubishi" element={<Mitsubishi />} />
         <Route path="/daikin" element={<Daikin />} />
-        <Route path="/bluestar" element={<BlueStar />} />
+        <Route path="/bluestar" element={<BlueStar/>} />
         <Route path="/toshiba" element={<Toshiba />} />
         <Route path="/wall-mounted" element={<WallMount />} />
         <Route path="/cassette" element={<Casette />} />
+        <Route path="/vrf" element={<Vrf/>} />
+        <Route path="/toshiba-casette" element={<ToshibaCassette/>} />
+        <Route path="/toshiba-duct" element={<ToshibaDucted/>} />
+        <Route path="/duct" element={<Duct/>} />
+        <Route path="/duct" element={<Duct/>} />
       </Routes>
       <Footer />
     </>

@@ -1,25 +1,65 @@
 import React, { useState } from "react";
 
-const blueStarData = [
+const categories = [
   {
-    name: "Packaged Ducted Split AC",
+    name: "VC-V Series",
     products: [
       {
-        title: "Blue Star – Packaged Ducted Split Air Conditioner",
-        image: "https://www.bluestarindia.com/media/78808/acs-thumb-1.jpg",
+        title: "AJG090JATAH",
+        image: "https://www.general-hvac.com/shared/in/img-0000-vrf-ajg072-108jatah-01.png",
         features: [
-          "Scroll compressor for higher efficiency",
-          "Factory charged with eco-friendly refrigerant",
-          "Wide operating voltage range",
-          "Easy ducting and installation flexibility",
-          "Microprocessor-based controls",
+          "High ambient operation up to 52 °C",
+          "Anti‑corrosion treatment",
+          "Energy‑saving inverter & DC fan",
+        ],
+      },
+    ],
+  },
+  {
+    name: "V-III TROPICAL Series",
+    products: [
+      {
+        title: "AJH072LNTCH",
+        image: "https://www.general-hvac.com/shared/in/img-0000-products-vrf-btn-vrf-v3-tropical-02.png",
+        features: [
+          "Compact design",
+          "High static pressure",
+          "Low noise operation (54 dB)",
+        ],
+      },
+    ],
+  },
+  {
+    name: "J-IVS Series",
+    products: [
+      {
+        title: "AJH045LCLBH",
+        image: "https://www.general-hvac.com/shared/in/img-0000-vrf-j4s-ajh040-054lclbh-lclah-01.png",
+        features: [
+          "Smart refrigerant control",
+          "Up to 13 indoor units",
+          "Non‑stop oil recovery",
+        ],
+      },
+    ],
+  },
+  {
+    name: "J-IVL Series",
+    products: [
+      {
+        title: "AJH072LELBH",
+        image: "https://www.general-hvac.com/shared/in/img-0000-vrf-ajh072-108lelbh-01.png",
+        features: [
+          "High ambient design",
+          "Connects up to 64 indoor units",
+          "Cooling capacity 120 kW",
         ],
       },
     ],
   },
 ];
 
-const BlueStar = () => {
+const Vrf = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -32,8 +72,7 @@ const BlueStar = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec";
+    const scriptURL ="https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec";
 
     const formData = new FormData();
     formData.append("email", email);
@@ -60,20 +99,20 @@ const BlueStar = () => {
     <div className="font-sans">
       <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold text-primary font-display px-4">
-          Blue Star – Packaged Ducted ACs
+          General – VRF Systems
         </h1>
       </section>
 
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Discover Blue Star's advanced ducted split air conditioners, engineered
-          for commercial environments. High-capacity cooling, flexible ducting,
-          and energy-efficient performance.
+          Explore General's VRF systems for flexible, energy-efficient cooling
+          in commercial and residential spaces. Designed for Indian climates,
+          delivering power and precision control.
         </p>
       </div>
 
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
-        {blueStarData.map((cat, idx) => (
+        {categories.map((cat, idx) => (
           <div key={idx} className="space-y-6">
             <h3 className="text-2xl font-heading font-semibold text-text-base">
               {cat.name}
@@ -178,4 +217,4 @@ const BlueStar = () => {
   );
 };
 
-export default BlueStar;
+export default Vrf;

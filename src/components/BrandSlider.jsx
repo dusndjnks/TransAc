@@ -6,7 +6,7 @@ import prdts1 from "../assets/prdts (1).png";
 import prdts2 from "../assets/prdts (2).png";
 import prdts3 from "../assets/prdts (3).png";
 import prdts4 from "../assets/prdts (4).png";
-import prdts5 from "../assets/prdts (5).png";
+import prdts5 from "../assets/logo/OIP.png";
 import prdts6 from "../assets/prdts (6).png";
 import prdts7 from "../assets/logo/logo1 (1).png"
 import prdts8 from "../assets/logo/logo1 (2).png";

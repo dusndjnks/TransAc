@@ -1,25 +1,52 @@
 import React, { useState } from "react";
 
-const blueStarData = [
+const categories = [
   {
-    name: "Packaged Ducted Split AC",
+    name: "SPI Premier Cassette AC Series",
     products: [
       {
-        title: "Blue Star – Packaged Ducted Split Air Conditioner",
-        image: "https://www.bluestarindia.com/media/78808/acs-thumb-1.jpg",
+        title: "Toshiba RAV-SM564UTP-E",
+        image: "https://www.toshibaac.in/images/products/Cassette/RAV-SE801UP_RAV-TE801AP.png", // Placeholder image
         features: [
-          "Scroll compressor for higher efficiency",
-          "Factory charged with eco-friendly refrigerant",
-          "Wide operating voltage range",
-          "Easy ducting and installation flexibility",
-          "Microprocessor-based controls",
+          "360° Airflow Distribution",
+          "Compact panel design for aesthetic ceiling fit",
+          "Quiet and efficient operation",
+        ],
+      },
+      {
+        title: "Toshiba RAV-SM804UTP-E",
+        image: "https://www.toshibaac.in/images/products/Cassette/RAV-SE801UP_RAV-TE801AP.png",
+        features: [
+          "Energy-saving inverter technology",
+          "Built-in drain pump",
+          "Smart control compatibility",
+        ],
+      },
+      {
+        title: "Toshiba RAV-SM1104UTP-E",
+        image: "https://www.toshibaac.in/images/products/Cassette/RAV-SE801UP_RAV-TE801AP.png",
+        features: [
+          "Ideal for large commercial spaces",
+          "Fresh air intake capability",
+          "Washable air filters",
         ],
       },
     ],
   },
 ];
 
-const BlueStar = () => {
+const features = [
+  "360° Airflow for uniform cooling",
+  "High-lift drain pump (up to 850mm)",
+  "Fresh air intake option",
+  "Compact design for easy installation",
+  "Low noise operation",
+  "Self-cleaning function",
+  "Anti-mold filter",
+  "Wireless and wired controller options",
+];
+
+const ToshibaCassette = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -57,23 +84,26 @@ const BlueStar = () => {
   };
 
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-white min-h-screen">
+      {/* Hero */}
       <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary font-display px-4">
-          Blue Star – Packaged Ducted ACs
+        <h1 className="text-4xl md:text-5xl font-bold text-primary font-display">
+          Toshiba – SPI Premier Cassette ACs
         </h1>
       </section>
 
+      {/* Intro */}
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Discover Blue Star's advanced ducted split air conditioners, engineered
-          for commercial environments. High-capacity cooling, flexible ducting,
-          and energy-efficient performance.
+          Discover Toshiba's SPI Premier Cassette AC systems. Engineered for commercial and
+          residential spaces, these units offer optimal airflow, efficient cooling, and
+          seamless integration with modern ceiling designs.
         </p>
       </div>
 
+      {/* Products */}
       <section className="bg-bg-light py-20 px-6 md:px-20 lg:px-40 space-y-16">
-        {blueStarData.map((cat, idx) => (
+        {categories.map((cat, idx) => (
           <div key={idx} className="space-y-6">
             <h3 className="text-2xl font-heading font-semibold text-text-base">
               {cat.name}
@@ -126,6 +156,7 @@ const BlueStar = () => {
         ))}
       </section>
 
+      {/* Modal */}
       {modal.open && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
           <div className="bg-white rounded-xl shadow-lg max-w-md w-full p-6">
@@ -178,4 +209,4 @@ const BlueStar = () => {
   );
 };
 
-export default BlueStar;
+export default ToshibaCassette;
