@@ -7,6 +7,8 @@ import Products from "../components/Products"
 import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
+import home6 from "../assets/home6.jpg"
+import about from "../assets/acabout.jpg";
 import ProductBrands from "../components/ProductBrands";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
@@ -19,8 +21,6 @@ const home4 = "https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpe
 const home5 = "https://images.pexels.com/photos/29252367/pexels-photo-29252367.jpeg"
 
 
-
-
 const Home = () => {
 
   return (
@@ -29,14 +29,14 @@ const Home = () => {
     <section id="home" className="relative w-full h-[65vh] lg:h-screen">
       <Swiper
         modules={[Autoplay, EffectFade]}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         effect="fade"
         fadeEffect={{ crossFade: true }}
-        speed={500} // Smoother fade duration
+        speed={1000} // Smoother fade duration
         className="w-full h-full"
       >
-        {[home3, home5, home4].map((image, idx) => (
+        {[about , home5, home4].map((image, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
@@ -64,7 +64,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
               <div className="relative rounded-lg overflow-hidden shadow-md h-80 md:h-96 bg-gray-100">
-                <img src={home1} alt="Our team at work" className="w-full h-full object-cover" />
+                <img src={home6} alt="Our team at work" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 bg-primary text-white px-6 py-3">
                   <span className="text-2xl font-bold">40+</span>
                   <p className="text-sm">Years of Experience</p>

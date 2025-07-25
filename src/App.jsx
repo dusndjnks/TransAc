@@ -17,6 +17,9 @@ import Duct from "./pages/brands/General/Duct.jsx";
 import BlueStar from "./secondorypages/BlueStar.jsx"; // ✅ Import BlueStar component
 import ToshibaCassette from "./pages/brands/toshiba/Casette.jsx";
 import ToshibaDucted from "./pages/brands/toshiba/Ducted.jsx";
+import VrfIndoor from "./pages/brands/toshiba/VrfIndoor.jsx";
+import IndoorAc from "./pages/brands/toshiba/IndoorAc.jsx";
+import HiWallSplit from "./pages/brands/toshiba/HiWallSplit.jsx";
 
 const App = () => {
   return (
@@ -38,8 +41,9 @@ const App = () => {
         <Route path="/vrf" element={<Vrf/>} />
         <Route path="/toshiba-casette" element={<ToshibaCassette/>} />
         <Route path="/toshiba-duct" element={<ToshibaDucted/>} />
-        <Route path="/duct" element={<Duct/>} />
-        <Route path="/duct" element={<Duct/>} />
+        <Route path="/indoor-vrf" element={<VrfIndoor/>} />
+        <Route path="/toshiba-vrf" element={<IndoorAc/>} />
+        <Route path="/wall-split" element={<HiWallSplit/>} />
       </Routes>
       <Footer />
     </>

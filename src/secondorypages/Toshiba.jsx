@@ -6,7 +6,7 @@ import toshibaLogo from "../assets/logo/logo.png"; // Replace with actual Toshib
 const categories = [
   {
     name: "Wall Mounted",
-    link: "toshiba-wall-mounted",
+    link: "wall-split",
     image: "https://www.toshibaac.in/images/products/Splits/hi-wall-new/G3KCV5SG.png", // Example Toshiba wall mount image
   },
   {
@@ -20,9 +20,14 @@ const categories = [
     image: "https://www.toshibaac.in/images/products/Ducted/RAV-SE801BP_RAV-TE801AP.png", // Ducted AC image
   },
   {
-    name: "VRF Systems",
+    name: "VRF Top Discharge AC",
     link: "toshiba-vrf",
     image: "https://www.toshibaac.in/images/products/VRF/1.png", // Example VRF
+  },
+  {
+    name: "VRF Systems",
+    link: "indoor-vrf",
+    image: "https://www.toshibaac.in/images/products/VRF/new/bi-flowing.jpg", // Example VRF
   },
 ];
 

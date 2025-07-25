@@ -2,28 +2,57 @@ import React, { useState } from "react";
 
 const categories = [
   {
-    name: "Stable Power Inverter Ducted AC Series",
+    name: "Hi‑Wall Inverter Split AC Series (Toshiba India)",
     products: [
       {
-        title: "Toshiba Stable Power Inverter Ducted AC",
-        image:
-          "https://www.toshibaac.in/images/products/Ducted/RAV-SE801BP_RAV-TE801AP.png",
+        title: "G3KCV – 3 & 5 Star R32 Inverter Hi‑Wall AC",
+        image: "https://www.toshibaac.in/images/products/Splits/hi-wall-new/G3KCV5SG.png", // not exposed in static HTML
         features: [
-          "Stable Power Inverter technology for consistent performance",
-          "Wide operating voltage range (198V – 264V)",
-          "High energy efficiency and low running cost",
-          "Compact and lightweight indoor unit design",
-          "Powerful airflow for uniform cooling",
-          "Flexible installation for various duct layouts",
-          "Quiet operation for enhanced comfort",
-          "Advanced microprocessor control",
+          "Nano‑coated heat‑exchanger for corrosion resistance",
+          "High airflow fan coil for fast cooling",
+          "DC Inverter with PAM/PWM for energy efficiency",
+          "Self‑cleaning fan eliminates mould / moisture",
+          "Quiet performance (~23 dB(A)) with incline fan blades",
+          "Operates stably up to 52 °C ambient temperature",
+          "Stabilizer‑free operation in 160–265 V range",
+          "5‑speed fan, swing louver & preset favorites",
+          "Weekly timer and preset functionality",
+        ],
+      },
+      {
+        title: "R32 5‑Star Hi‑Wall Inverter AC",
+        image: "https://www.toshibaac.in/images/products/R32_product.png",
+        features: [
+          "13 % larger fan coil + 10 % increased heat transfer surface",
+          "Whisper‑quiet blades (~23 dB)",
+          "11 louver positions for airflow precision",
+          "Aqua Resin coated coil (Magic Coil) prevents dirt build-up",
+          "Double‑clean system: self‑clean and air filter function",
+          "IAQ filter reduces bacteria & virus (e.g. H5N1) spread",
+          "Smartphone control via optional Wi‑Fi module",
+          "Power‑select (50 % / 75 % / 100 %) for savings",
+          "Programmable weekly scheduling and ECO mode",
+        ],
+      },
+      {
+        title: "Seiya (2 kW – 7 kW) & Seiya Classic (up to 10 kW)",
+        image: "https://www.toshibaac.in/images/products/splits/heating-cooling.png",
+        features: [
+          "Quiet operation via noise-reduction function",
+          "Efficient hybrid inverter and twin rotary compressor",
+          "Ultra‑Pure filter absorbs odors, bacteria & mold",
+          "Magic Coil for easy cleaning / hygiene",
+          "6 airflow patterns in Seiya Classic models",
+          "Power‑select & ECO standby modes",
+          "Remote or built‑in Wi‑Fi control (optional)",
         ],
       },
     ],
   },
 ];
 
-const ToshibaDucted = () => {
+
+const HiWallSplit = () => {
   const [modal, setModal] = useState({ open: false, product: null });
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -35,43 +64,37 @@ const ToshibaDucted = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const scriptURL =
       "https://script.google.com/macros/s/AKfycby8iYYpTB0-yQ4YiSJVyizcc14evLr9Zx0O5WONfzsdqNbC2fZd5ZhwFAqd8y8czuMw/exec";
-
     const formData = new FormData();
     formData.append("email", email);
     formData.append("phone", phone);
     formData.append("product", modal.product);
-
     try {
-      await fetch(scriptURL, {
-        method: "POST",
-        body: formData,
-      });
-      setModal({ open: false, product: null });
-      setEmail("");
-      setPhone("");
+      await fetch(scriptURL, { method: "POST", body: formData });
+      alert("Enquiry sent successfully!");
     } catch (error) {
-      setModal({ open: false, product: null });
-      setEmail("");
-      setPhone("");
+      console.error("Error!", error.message);
+      alert("Something went wrong.");
     }
+    setModal({ open: false, product: null });
+    setEmail("");
+    setPhone("");
   };
 
   return (
     <div className="font-sans">
       <section className="bg-bg-dark py-24 md:py-40 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary font-display px-4">
-          Toshiba Stable Power Inverter Ducted AC
+        <h1 className="text-4xl md:text-5xl font-bold text-primary font-display">
+          Toshiba Hi‑Wall Inverter Split AC
         </h1>
       </section>
 
       <div className="py-14 px-6 md:px-16 lg:px-40 bg-white text-center">
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          The Toshiba Stable Power Inverter Ducted AC is engineered for reliable,
-          energy-efficient cooling in demanding environments, with advanced inverter
-          technology and flexible installation options.
+          Experience advanced inverter cooling from Toshiba’s premium Hi‑Wall Split AC range.
+          Equipped with DC Hybrid technology, Magic Coil anti-dust protection, IAQ filtering,
+          and silent operation, these units deliver comfort, energy savings, and durable performance.
         </p>
       </div>
 
@@ -101,14 +124,10 @@ const ToshibaDucted = () => {
                       onClick={() => toggleFeatures(product.title)}
                       className="text-sm text-primary font-semibold hover:underline"
                     >
-                      {openFeatures[product.title]
-                        ? "Hide Features"
-                        : "Show Features"}
+                      {openFeatures[product.title] ? "Hide Features" : "Show Features"}
                     </button>
                     <button
-                      onClick={() =>
-                        setModal({ open: true, product: product.title })
-                      }
+                      onClick={() => setModal({ open: true, product: product.title })}
                       className="text-sm text-white bg-primary px-3 py-1.5 rounded-md hover:bg-primary-dark transition"
                     >
                       Enquire Now
@@ -117,8 +136,8 @@ const ToshibaDucted = () => {
 
                   {openFeatures[product.title] && (
                     <ul className="mt-4 text-left text-sm text-gray-700 list-disc list-inside">
-                      {product.features.map((f, fi) => (
-                        <li key={fi}>{f}</li>
+                      {product.features.map((f, idx2) => (
+                        <li key={idx2}>{f}</li>
                       ))}
                     </ul>
                   )}
@@ -181,4 +200,4 @@ const ToshibaDucted = () => {
   );
 };
 
-export default ToshibaDucted;
+export default HiWallSplit;
