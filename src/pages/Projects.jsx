@@ -44,7 +44,7 @@ const projects = [
     src: prjcts3,
     alt: "Residential AC installation",
     title: "Gokulam residency ",
-    description: "57 hp vrf centralised",
+    description: "VRF centralised",
   },
   {
     type: "image",

@@ -38,7 +38,7 @@ const Home = () => {
         speed={1000} // Smoother fade duration
         className="w-full h-full"
       >
-        {[ home7 , home4 , home6  ].map((image, idx) => (
+        {[ home4 , home5 , about ].map((image, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
