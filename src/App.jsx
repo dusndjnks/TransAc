@@ -20,6 +20,11 @@ import ToshibaDucted from "./pages/brands/toshiba/Ducted.jsx";
 import VrfIndoor from "./pages/brands/toshiba/VrfIndoor.jsx";
 import IndoorAc from "./pages/brands/toshiba/IndoorAc.jsx";
 import HiWallSplit from "./pages/brands/toshiba/HiWallSplit.jsx";
+import DaikinSplit from "./pages/brands/Daikinx/DaikinSplit.jsx";
+import DaikinCasette from "./pages/brands/Daikinx/DaikinCasette.jsx";
+import DaikinDucted from "./pages/brands/Daikinx/DaikinDucted.jsx";
+import DaikinVrv from "./pages/brands/Daikinx/DaikinVrv.jsx";
+import DaikinFloor from "./pages/brands/Daikinx/DaikinFloor.jsx";
 
 const App = () => {
   return (
@@ -44,6 +49,11 @@ const App = () => {
         <Route path="/indoor-vrf" element={<VrfIndoor/>} />
         <Route path="/toshiba-vrf" element={<IndoorAc/>} />
         <Route path="/wall-split" element={<HiWallSplit/>} />
+        <Route path="/daikin-split" element={<DaikinSplit/>} />
+        <Route path="/daikin-cassette" element={<DaikinCasette/>} />
+        <Route path="/daikin-ducted" element={<DaikinDucted/>} />
+        <Route path="/daikin-vrv" element={<DaikinVrv/>} />
+        <Route path="/daikin-floor" element={<DaikinFloor/>} />
       </Routes>
       <Footer />
     </>
