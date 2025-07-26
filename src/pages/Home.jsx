@@ -8,7 +8,9 @@ import home1 from "../assets/hero.jpg";
 import home2 from "../assets/hero2.jpg"
 import home3 from "../assets/hero3.jpg";
 import home6 from "../assets/home6.jpg"
+import home7 from "../assets/home7.png"
 import about from "../assets/acabout.jpg";
+import about5 from "../assets/about5.png"
 import ProductBrands from "../components/ProductBrands";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
@@ -36,7 +38,7 @@ const Home = () => {
         speed={1000} // Smoother fade duration
         className="w-full h-full"
       >
-        {[about , home5, home4].map((image, idx) => (
+        {[ home7 , home4 , home6  ].map((image, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
@@ -59,57 +61,61 @@ const Home = () => {
     </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <div className="relative rounded-lg overflow-hidden shadow-md h-80 md:h-96 bg-gray-100">
-                <img src={home6} alt="Our team at work" className="w-full h-full object-cover" />
-                <div className="absolute bottom-0 left-0 bg-primary text-white px-6 py-3">
-                  <span className="text-2xl font-bold">40+</span>
-                  <p className="text-sm">Years of Experience</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-                About Our Company
-              </h2>
-              <p className="text-gray-600 text-[15px] leading-relaxed mb-4">
-                  <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. We also deal in top-tier brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your <span className="text-primary">specific needs</span>.
-                </p>
-
-
-              <div className="sm:space-x-3 mb-5 flex">
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary-light p-2 rounded-full">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">40+ years of trusted service</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary-light p-2 rounded-full">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">500+ satisfied customers</span>
-                </div>
-              </div>
-
-              <NavLink
-                to="/about"
-                className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-md hover:shadow-lg"
-              >
-                Read More About Us
-              </NavLink>
-            </div>
+     <section id="about" className="py-16 md:py-24">
+  <div className="max-w-6xl mx-auto px-6 md:px-8">
+    <div className="flex flex-col md:flex-row items-center gap-12">
+      <div className="w-full md:w-1/2">
+        <div className="relative rounded-lg overflow-hidden shadow-md bg-gray-100">
+          <img
+            src={about5}
+            alt="Our team at work"
+            className="w-full h-auto object-cover"
+          />
+          <div className="absolute bottom-0 left-0 bg-primary text-white md:px-6 px-3 md:py-3 py-1">
+            <span className="md:text-2xl font-bold">40+</span>
+            <p className="text-xs md:text-sm">Years of Experience</p>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="w-full md:w-1/2">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+          About Our Company
+        </h2>
+        <p className="text-gray-600 text-[15px] leading-relaxed mb-4">
+          <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in centralized systems such as <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, <span className="text-primary">package units</span>, and <span className="text-primary">AHUs</span>. We also deal in top-tier brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>. Our team of skilled professionals ensures each project is handled with care — delivering energy-efficient, long-lasting cooling solutions tailored to your <span className="text-primary">specific needs</span>.
+        </p>
+
+        <div className="sm:space-x-3 mb-5 flex flex-wrap gap-y-3">
+          <div className="flex items-center gap-3">
+            <div className="bg-primary-light p-2 rounded-full">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="text-gray-700">40+ years of trusted service</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="bg-primary-light p-2 rounded-full">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="text-gray-700">500+ satisfied customers</span>
+          </div>
+        </div>
+
+        <NavLink
+          to="/about"
+          className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-md hover:shadow-lg"
+        >
+          Read More About Us
+        </NavLink>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <Products/>
 
