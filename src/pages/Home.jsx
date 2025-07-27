@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import homepage1 from "../assets/homepage (1).jpg";
 import homepage2 from "../assets/homepage (1).webp";
-import homepage3 from "../assets/homepage (2).WEBP";
+import homepage3 from "../assets/homepage (2).webp";
 import homepage4 from "../assets/homepage (2).jpg";
 import homepage5 from "../assets/homepage (4).jpg";
 import homepage6 from "../assets/projects.jpg";
