@@ -10,7 +10,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import homepage1 from "../assets/homepage (1).jpg";
-import homepage2 from "../assets/homepage (1).WEBP";
+import homepage2 from "../assets/homepage (1).webp";
 import homepage3 from "../assets/homepage (2).WEBP";
 import homepage4 from "../assets/homepage (2).jpg";
 import homepage5 from "../assets/homepage (4).jpg";
@@ -38,7 +38,7 @@ const Home = () => {
         speed={1000} // Smoother fade duration
         className="w-full h-full"
       >
-        {[ home4 , home5 , homepage6].map((image, idx) => (
+        {[ home4 , home5 , homepage6 , homepage2].map((image, idx) => (
           <SwiperSlide key={idx}>
             <div
               className="w-full h-[65vh] lg:h-screen bg-cover bg-center bg-no-repeat relative"
