@@ -71,9 +71,18 @@ const Footer = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>
             </div>
-            <a href="tel:+917558801625" className="hover:text-primary-600 transition-colors">
+            <div className="flex flex-col space-y-3">
+              <a href="tel:+917558801625" className="hover:text-primary-600 transition-colors">
               +91 7558801625
             </a>
+            <a href="tel:+9194470828735" className="hover:text-primary-600 transition-colors">
+              +91 9447082873
+            </a>
+            <a href="tel:+916238311805" className="hover:text-primary-600 transition-colors">
+              +91 6238311805
+
+            </a>
+            </div>
           </div>
           <div className="flex items-center justify-center md:justify-start">
             <div className="bg-primary-100 p-2 rounded-full mr-3">

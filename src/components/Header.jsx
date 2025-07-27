@@ -56,8 +56,15 @@ const Header = () => {
                 className="flex items-center text-sm text-white font-sans"
               >
                 <FaPhone className="mr-2" />
-                +91 7558801625
+                +91 7558801625 
               </a>
+               <a
+                href="tel:+9447082873"
+                className="flex items-center text-sm text-white font-sans"
+              >
+                <FaPhone className="mr-2" />
+                +91 9447082873 
+              </a>  
               <a
                 href="mailto:transindiacooling@gmail.com"
                 className="flex items-center text-sm text-white font-sans"
