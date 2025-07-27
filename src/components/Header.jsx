@@ -176,6 +176,13 @@ const Header = () => {
                 +91 7558801625
               </a>
               <a
+                href="tel:+91 9447082873 "
+                className="flex items-center px-3 py-3 text-gray-700"
+              >
+                <FaPhone className="mr-3" />
+                +91 9447082873 
+              </a>
+              <a
                 href="mailto:transindiacooling@gmail.com"
                 className="flex items-center px-3 py-3 text-gray-700"
               >
