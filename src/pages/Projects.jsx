@@ -9,7 +9,7 @@ import prjcts6 from "../assets/projects/prjcts (3).jpg";
 import prjcts7 from "../assets/projects/prjcts (4).jpg";
 import prjcts8 from "../assets/projects/prjcts (5).jpg";
 import prjcts9 from "../assets/projects/projects6.jpg"
-import prjcts10 from "../assets/projects/projects7.jpg"
+import prjcts10 from "../assets/projects/res.JPG"
 
 const projects = [
   {
