@@ -58,6 +58,34 @@ const Product = () => {
           </div>
         </div>
 
+          {/* Mitsubishi Brand */}
+        <div className="bg-white shadow-md rounded-2xl overflow-hidden max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:gap-10 items-center">
+            <div className="flex justify-center">
+              <img
+                src={logo5}
+                alt="Mitsubishi"
+                className="md:h-72 h-32 py-5 px-5 md:py-8 object-contain"
+              />
+            </div>
+            <div className="p-8 text-center md:text-left">
+              <h3 className="text-2xl font-bold font-heading text-text-base mb-4">
+                Mitsubishi
+              </h3>
+              <p className="text-text-light text-base mb-6">
+                Mitsubishi air conditioners are known for their advanced technology, whisper-quiet operation, and long-term durability.
+              </p>
+              <a
+                href="/mitsubishi"
+                className="inline-flex items-center text-primary font-semibold hover:underline"
+              >
+                Check Products{" "}
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Toshiba Brand */}
         <div className="bg-white shadow-md rounded-2xl overflow-hidden max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 lg:gap-10 items-center">
@@ -133,34 +161,6 @@ const Product = () => {
               </p>
               <a
                 href="/bluestar"
-                className="inline-flex items-center text-primary font-semibold hover:underline"
-              >
-                Check Products{" "}
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-         {/* Mitsubishi Brand */}
-        <div className="bg-white shadow-md rounded-2xl overflow-hidden max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:gap-10 items-center">
-            <div className="flex justify-center">
-              <img
-                src={logo5}
-                alt="Mitsubishi"
-                className="md:h-72 h-32 py-5 px-5 md:py-8 object-contain"
-              />
-            </div>
-            <div className="p-8 text-center md:text-left">
-              <h3 className="text-2xl font-bold font-heading text-text-base mb-4">
-                Mitsubishi
-              </h3>
-              <p className="text-text-light text-base mb-6">
-                Mitsubishi air conditioners are known for their advanced technology, whisper-quiet operation, and long-term durability.
-              </p>
-              <a
-                href="/mitsubishi"
                 className="inline-flex items-center text-primary font-semibold hover:underline"
               >
                 Check Products{" "}
