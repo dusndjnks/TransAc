@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import gal2 from "../assets/project9.png";
-import gal3 from "../assets/IMG-20250714-WA0029.jpg";
+import gal3 from "../assets/projects/prjcts (4).jpg";
+import gal2 from "../assets/projects/prjcts (1).png";
 
 
 const GallerySection = () => {
