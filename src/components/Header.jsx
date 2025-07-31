@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/translogo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
