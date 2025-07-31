@@ -17,7 +17,7 @@ const Form = () => {
   const formData = new FormData(form);
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbymjekkFzEppObUKfIa7lvnUcECwLn8TUUFZb-2-FtJ58J5YnLpD2AeH3YvKiM6cWWh/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbymjekkFzEppObUKfIa7lvnUcECwLn8TUUFZb-2-FtJ58J5YnLpD2AeH3YvKiM6cWWh/exec" , {
       method: "POST",
       body: formData,
       mode: "no-cors", // 👈 this fixes the CORS issue
