@@ -32,12 +32,12 @@ const showrooms = [
   {
     img: homepage1,
     location: "Kothamangalam",
-    link: "https://maps.app.goo.gl/YPFFb6Y3Woeb1Ket8",
+    link: "https://maps.app.goo.gl/MFWnfBTZ1ksGqzRFA",
   },
   {
     img: homepage3,
     location: "Perumbavoor",
-    link: "https://maps.app.goo.gl/xhbCWRAXwSsUkKVm6",
+    link: "https://maps.app.goo.gl/YPFFb6Y3Woeb1Ket8",
   },
   {
     img: homepage5,

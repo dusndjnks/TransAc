@@ -106,7 +106,73 @@ const categories = [
       },
     ],
   },
+  {
+    name: "Efficient & Tropical Inverter - Hot & Cold",
+    products: [
+      {
+        title: "ASGG18KJTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-24kjta-b-01.jpg",
+        features: [],
+      },
+      {
+        title: "ASGG24KJTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-24kjta-b-01.jpg",
+        features: [],
+      },
+      {
+        title: "ASGG30KJTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-24kjta-b-01.jpg",
+        features: [],
+      },
+    ],
+  },
+  {
+    name: "Tropical Innovation Split",
+    products: [
+      {
+        title: "ASGA18BUTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA24BUTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA30FUTD-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA36FUTC-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+    ],
+  },
+  {
+    name: "Extreme Cooling Split",
+    products: [
+      {
+        title: "ASGA14BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA18BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA24BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+    ],
+  },
 ];
+
 
 const WallMount = () => {
   const [modal, setModal] = useState({ open: false, product: null });
