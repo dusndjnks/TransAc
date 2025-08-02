@@ -43,6 +43,26 @@ const categories = [
     ],
   },
   {
+    name: "Extreme Cooling Split",
+    products: [
+      {
+        title: "ASGA14BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA18BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA24BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+    ],
+  },
+  {
     name: "Efficient & Tropical Inverter",
     products: [
       {
@@ -71,6 +91,51 @@ const categories = [
           "Easy-clean air filters",
           "Anti-rust body design",
         ],
+      },
+    ],
+  },
+  {
+    name: "Tropical Innovation Split",
+    products: [
+      {
+        title: "ASGA18BUTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA24BUTA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA30FUTD-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA36FUTC-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
+        features: [],
+      },
+    ],
+  },
+   {
+    name: "Extreme Cooling Split",
+    products: [
+      {
+        title: "ASGA14BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA18BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
+      },
+      {
+        title: "ASGA24BMAA-B",
+        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
+        features: [],
       },
     ],
   },
@@ -126,51 +191,7 @@ const categories = [
       },
     ],
   },
-  {
-    name: "Tropical Innovation Split",
-    products: [
-      {
-        title: "ASGA18BUTA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
-        features: [],
-      },
-      {
-        title: "ASGA24BUTA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
-        features: [],
-      },
-      {
-        title: "ASGA30FUTD-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
-        features: [],
-      },
-      {
-        title: "ASGA36FUTC-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-split-wall-asga18-36futc-b-01.png",
-        features: [],
-      },
-    ],
-  },
-  {
-    name: "Extreme Cooling Split",
-    products: [
-      {
-        title: "ASGA14BMAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
-        features: [],
-      },
-      {
-        title: "ASGA18BMAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
-        features: [],
-      },
-      {
-        title: "ASGA24BMAA-B",
-        image: "https://www.general-hvac.com/shared/in/img-gcin-products-split-asga18bmaab-01.png",
-        features: [],
-      },
-    ],
-  },
+ 
 ];
 
 
