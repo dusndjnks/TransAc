@@ -13,7 +13,7 @@ import Products from "../components/Products";
 import ProductBrands from "../components/ProductBrands";
 
 // Assets
-import homepage1 from "../assets/homepage (1).jpg";
+import homepage1 from "../assets/trans-india-cooling-showroom-1.webp"; 
 import homepage2 from "../assets/vrf.webp";
 import homepage3 from "../assets/homepage (2).webp";
 import homepage4 from "../assets/homepage (2).jpg";
