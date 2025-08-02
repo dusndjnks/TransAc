@@ -96,8 +96,8 @@ const Home = () => {
                 About Our Company
               </h2>
               <p className="text-gray-600 text-[15px] leading-relaxed mb-4">
-                <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in centralized systems like <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, and more. We work with brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, and <span className="text-primary">Panasonic</span>.
-              </p>
+                <span className="font-semibold text-primary">TRANS INDIA COOLING SOLUTIONS</span> has been delivering trusted air conditioning services for over 40 years. With showrooms in <span className="text-primary">Perumbavoor</span>, <span className="text-primary">Kothamangalam</span>, and <span className="text-primary">Thankalam</span>, we specialize in centralized systems like <span className="text-primary">VRF</span>, <span className="text-primary">VRV</span>, <span className="text-primary">ductable units</span>, and more. We are authorized dealers for leading brands like <span className="text-primary">Mitsubishi</span>, <span className="text-primary">Toshiba</span>, <span className="text-primary">General</span>, <span className="text-primary">Daikin</span>, <span className="text-primary">Panasonic</span>, and <span className="text-primary">Blue Star</span>.
+                     </p>
 
               <div className="sm:space-x-3 mb-5 flex flex-wrap gap-y-3">
                 {["40+ years of trusted service", "500+ satisfied customers"].map((text, idx) => (
